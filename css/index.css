@@ -2,5 +2,18 @@
 @import "./reset.css";
 
 /* Page */
-/* @import ""; PopUps */
+@import "./components/header.css";
+
 @import "./components/services.css";
+@import "./components/turnkey-solutions.css";
+@import "./components/decision-contact.css";
+@import "./components/cases.css";
+@import "./components/reviews.css";
+@import "./components/about-company.css";
+@import "./components/advantages.css";
+@import "./components/work-process.css";
+@import "./components/individual-solution.css";
+@import "./components/gallery.css";
+@import "./components/articles.css";
+
+@import "./components/footer.css";

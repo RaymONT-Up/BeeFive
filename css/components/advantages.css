@@ -1,0 +1,25 @@
+.advantages {
+}
+.advantages__inner {
+}
+.advantages__title {
+}
+.advantages__title--accent {
+}
+.advantages__list {
+}
+.advantages__item {
+}
+.advantages__item-text {
+  position: relative;
+  padding-left: 50px;
+}
+.advantages__item-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.advantages__item-text--accent {
+}
