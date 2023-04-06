@@ -3,16 +3,30 @@
 .footer__inner {
 }
 .footer__top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 0.8fr 0.2fr;
+  grid-gap: 10px;
+  margin-bottom: 20px;
 }
 .footer__box {
 }
 .footer__subtitle {
+  margin-bottom: 10px;
 }
 .footer__item {
+  width: 100%;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 .footer__link {
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 5px 5px 0;
+  width: 100%;
 }
 .footer__social {
 }
 .footer__bottom {
+  text-align: center;
 }

@@ -1,6 +1,8 @@
 .decision-contact {
 }
 .decision-contact__inner {
+  position: relative;
+  margin-bottom: 50px;
 }
 .decision-contact__title {
 }
@@ -9,4 +11,7 @@
 .decision-contact__toggle {
 }
 .decision-contact__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }

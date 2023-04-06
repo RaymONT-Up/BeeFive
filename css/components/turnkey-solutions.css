@@ -1,13 +1,19 @@
 .turnkey-solutions {
 }
 .turnkey-solutions__inner {
+  margin-bottom: 50px;
 }
 .turnkey-solutions__title {
+  margin-bottom: 10px;
 }
 .turnkey-solutions__title--accent {
+  display: block;
+  margin-left: 50px;
 }
 .turnkey-solutions__contact-link {
 }
+
+/* Slider */
 .turnkey-solutions__slider {
 }
 .turnkey-solutions__list {

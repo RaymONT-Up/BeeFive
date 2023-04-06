@@ -1,4 +1,10 @@
 :root {
-  --color-accent-1: ;
-  --color-accent-2: ;
+  --color-text-1: #fff;
+  --color-text-2: #000;
+
+  --color-accent-1: orange;
+  --color-accent-2: blue;
+
+  --border-radius-1: 16px;
+  --border-radius-card: 12px;
 }

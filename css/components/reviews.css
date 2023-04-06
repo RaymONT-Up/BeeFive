@@ -6,11 +6,16 @@
 }
 .reviews__btn {
 }
+
 .reviews__slider {
 }
-.reviews__list {
-}
 
+.reviews__list {
+  margin-bottom: 20px;
+}
+.reviews__slider-arrows {
+  justify-content: flex-end;
+}
 .reviews__item {
 }
 .reviews__item-titme {

@@ -1,17 +1,26 @@
-.services {
-}
 .services__inner {
+  margin-bottom: 50px;
 }
 .services__top {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  margin-bottom: 30px;
 }
 .services__title {
+  position: relative;
 }
+
 .services__line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent-2);
 }
 
 .services__box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.0001fr;
 }
 .services__list {
   position: relative;
@@ -19,6 +28,20 @@
 
 .services__accordion {
   display: flex;
+}
+.services__accordion-btn {
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+
+  text-align: center;
+  font-size: 18px;
+
+  color: var(--color-text-2);
+  background-color: var(--color-text-1);
+
+  transition: all, 0.3s;
 }
 .services__accordion-content {
   position: absolute;
@@ -42,5 +65,6 @@
   background-color: blue;
 }
 .services__accordion--open .services__accordion-btn {
-  background-color: red;
+  color: var(--color-text-1);
+  background-color: var(--color-accent-1);
 }

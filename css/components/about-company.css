@@ -1,16 +1,24 @@
 .about-company {
 }
 .about-company__inner {
+  margin-bottom: 50px;
 }
 .about-company__title {
+  margin-bottom: 20px;
 }
-.about-company__box {
+.about-company__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
 }
 .about-company__subtitle {
 }
 .about-company__team {
 }
+.about-company__box {
+}
 .about-company__clients {
+  margin-bottom: 30px;
 }
 .about-company__where {
 }

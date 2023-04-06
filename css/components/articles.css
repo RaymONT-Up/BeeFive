@@ -1,10 +1,14 @@
 .articles {
 }
 .articles__inner {
+  margin-bottom: 50px;
 }
 .articles__title {
+  font-size: 16px;
+  margin-bottom: 1em;
 }
 .articles__title--accent {
+  margin-left: 1.5em;
 }
 .articles__slider {
 }

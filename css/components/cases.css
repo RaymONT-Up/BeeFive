@@ -1,18 +1,35 @@
 .cases {
 }
 .cases__inner {
+  margin-bottom: 100px;
 }
 .cases__title {
+  margin-bottom: 20px;
 }
 .cases__slider {
 }
 .cases__list {
+  margin-bottom: 20px;
+}
+.cases__slider-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cases__slider-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto;
 }
 
 /* Item */
 .cases__item {
+  padding-top: 30px;
+  position: relative;
 }
 .cases__item-name {
+  position: absolute;
+  top: 10px;
+  color: var(--color-text-1);
+  background-color: var(--color-text-2);
 }
 .cases__item-paragraph {
 }

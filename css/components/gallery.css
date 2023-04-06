@@ -1,8 +1,14 @@
 .gallery {
 }
 .gallery__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 80px;
 }
 .gallery__item {
 }
 .gallery__img {
+  width: 100%;
+  display: block;
 }
