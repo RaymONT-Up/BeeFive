@@ -23,6 +23,9 @@ body {
   color: var(--color-text-1);
   background-color: grey;
 }
+body.body-lock {
+  overflow: hidden;
+}
 
 /* Custom scrol */
 *::-webkit-scrollbar {
@@ -130,4 +133,41 @@ body {
 .slider-arrow--prev.swiper-button-disabled,
 .slider-arrow--next.swiper-button-disabled {
   opacity: 0.5;
+}
+
+/* Modal Window */
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  transition: all 0.7s;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup.popup--open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  position: relative;
+  z-index: 9;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.popup__body {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }

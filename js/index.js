@@ -80,8 +80,7 @@ const articlesSlider = new Swiper(".articles__slider", {
   pagination: {
     el: ".articles__slider-pagination",
     clickable: true,
-    renderBullet: function (index, className, ar) {
-      console.log(ar);
+    renderBullet: function (index, className) {
       return `<span class="${className}">${index + 1}</span>`;
     },
   },
