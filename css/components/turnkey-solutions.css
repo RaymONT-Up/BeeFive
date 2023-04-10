@@ -1,39 +1,116 @@
-.turnkey-solutions {
-}
 .turnkey-solutions__inner {
   margin-bottom: 50px;
 }
 .turnkey-solutions__title {
   margin-bottom: 10px;
+  line-height: 100%;
 }
 .turnkey-solutions__title--accent {
   display: block;
-  margin-left: 50px;
+  margin-left: 1.2em;
 }
 .turnkey-solutions__contact-link {
+  margin-bottom: 80px;
+  margin-left: 10px;
 }
 
 /* Slider */
-.turnkey-solutions__slider {
-}
+
 .turnkey-solutions__list {
+  margin-bottom: 40px;
 }
 
 .turnkey-solutions__item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  padding: 50px 28px;
+  box-sizing: border-box;
+  min-height: 540px;
 }
 .turnkey-solutions__item-name {
+  margin-bottom: 20px;
+
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: "Actay";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+
+  color: var(--color-text-3);
 }
 .turnkey-solutions__item-title {
+  margin-bottom: 8px;
+
+  text-transform: uppercase;
+  font-family: "Syncopate";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+
+  letter-spacing: -0.01em;
+
+  color: var(--color-text-2);
 }
 .turnkey-solutions__item-paragraph {
+  margin-bottom: 10px;
+
+  font-family: "Actay";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
 }
 .turnkey-solutions__item-duration {
+  margin-top: auto;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 100%;
+  margin-bottom: 8px;
 }
+
 .turnkey-solutions__item-price {
+  width: fit-content;
+  position: relative;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 100%;
+}
+.turnkey-solutions__item-price::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: 48%;
+  transform: translate(-50%, -50%);
+
+  width: 12px;
+  height: 15px;
+  background-image: url(./../../images/icons/kzt-tenge.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .turnkey-solutions__item-buy {
+  margin-bottom: 8px;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  box-sizing: border-box;
+  max-width: 226px;
+  width: 100%;
+  border-radius: var(--border-radius-card);
 }
 .turnkey-solutions__item-download {
+  max-width: 226px;
+  width: 100%;
+  border-radius: var(--border-radius-card);
+}
+
+.turnkey-solutions__slider-arrows {
+  justify-content: flex-end;
+}
+.turnkey-solutions__slider-arrow--prev {
+  margin-right: 15px;
 }

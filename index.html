@@ -14,6 +14,7 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/page.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -41,8 +42,12 @@
                 </li>
               </ul>
               <div class="header__phones">
-                <a href="tel:" class="header__phone link">+7000</a>
-                <a href="tel:" class="header__phone link">+7000</a>
+                <a href="tel:70000000000" class="header__phone link">
+                  +7 000 000 00 00
+                </a>
+                <a href="tel:70000000000" class="header__phone link">
+                  +7 000 000 00 00
+                </a>
               </div>
             </nav>
             <a href="#contact" class="header__contact-btn btn-big popup-link">
@@ -55,17 +60,25 @@
         <section class="hero">
           <div class="container">
             <div class="hero__inner">
-              <h1 class="hero__title">BeeFive</h1>
-              <h2 class="hero__subtitle">
+              <div class="hero__logo-wrapper">
+                <img
+                  class="hero__logo-img"
+                  src="./images/icons/hero-big-logo.svg"
+                  alt="BeeFive логотип"
+                />
+              </div>
+              <h1 class="hero__subtitle title--3">
                 Помогаем организациям быть лучше и эффективнее на каждом этапе
                 развития
-              </h2>
+              </h1>
               <ul class="hero__list">
-                <li class="hero__item">Lorem ipsum dolor sit amet.</li>
-                <li class="hero__item">Lorem ipsum dolor sit amet.</li>
-                <li class="hero__item">Lorem ipsum dolor sit amet.</li>
-                <li class="hero__item">Lorem ipsum dolor sit amet.</li>
-                <li class="hero__item">Lorem ipsum dolor sit amet.</li>
+                <li class="hero__item">
+                  ПОВЫШЕНИЕ ЛОЯЛЬНОСТИ КЛИЕНТОВ И СОТРУДНИКОВ
+                </li>
+                <li class="hero__item">СНИЖЕНИЕ ТЕКУЧЕСТИ ПЕРСОНАЛА</li>
+                <li class="hero__item">УВЕЛИЧЕНИЕ ПРОДАЖ</li>
+                <li class="hero__item">ПОВЫШЕНИЕ ЭФФЕКТИВНОСТИ КОМАНДЫ</li>
+                <li class="hero__item">ТРАНСЛИРОВАНИЕ БИЗНЕС-ЦЕЛИ</li>
               </ul>
             </div>
           </div>
@@ -78,50 +91,146 @@
                 <h3 class="services__title title--2">Услуги</h3>
                 <div class="services__line"></div>
               </div>
-              <div class="services__box">
-                <ul class="services__list">
-                  <li class="services__accordion services__accordion--open">
-                    <button class="services__accordion-btn">
-                      Стратегическая сессия
-                    </button>
-                    <div class="services__accordion-content">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      cum nisi voluptas harum impedit commodi non voluptatem
-                      consequatur, est eligendi sed quisquam molestias magnam
-                      dicta? Lorem ipsum dolor, sit amet consectetur adipisicing
-                      elit. Deserunt nulla distinctio ea optio. Iusto, cum nisi
-                      voluptas harum impedit commodi non voluptatem consequatur,
-                      est eligendi sed quisquam molestias magnam dicta?
-                    </div>
+
+              <div class="services__tabs">
+                <div class="services__tab-controlers">
+                  <button
+                    class="services__tab-btn services__tab--active"
+                    data-tab-name="1"
+                  >
+                    Стратегическая сессия
+                  </button>
+                  <button class="services__tab-btn" data-tab-name="2">
+                    Построение культуры сервиса в компании
+                  </button>
+                  <button class="services__tab-btn" data-tab-name="3">
+                    Управление персоналом
+                  </button>
+                  <button class="services__tab-btn" data-tab-name="4">
+                    Обучение и развитие персонала
+                  </button>
+                </div>
+                <ul class="services__content-list">
+                  <li
+                    class="services__tab-content services__tab--active"
+                    data-tab-name="1"
+                  >
+                    <h4 class="services__tab-content-title title--4">
+                      Стратегическая сессия:
+                    </h4>
+
+                    <ul class="services__tab-content-list">
+                      <li class="services__tab-content-item">
+                        Проработка бизнес-цели компании, задач и ключевых
+                        проектов, возможностей и рисков;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Вовлечение команды компании: объединение сотрудников для
+                        достижения общей цели, совместная генерация идей, взятие
+                        на себя ответственности на результат;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Проработка миссии и ценностей компании.
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#servicesContact"
+                      class="services__tab-content-btn popup-link default-btn"
+                    >
+                      Заказать услугу
+                    </a>
                   </li>
-                  <li class="services__accordion">
-                    <button class="services__accordion-btn">
-                      Построение культуры сервиса в компании
-                    </button>
-                    <div class="services__accordion-content">
-                      Lorem ipsum dolor, sitLorem ipsum dolor, sitLorem ipsum
-                      dolor, sitLorem ipsum dolor, sitLorem ipsum dolor,
-                      sitLorem ipsum dolor, sitLorem ipsum dolor, sitLorem ipsum
-                      dolor, sitLorem ipsum dolor, sitLorem ipsum dolor,
-                      sitLorem ipsum dolor, sit
-                    </div>
+                  <li class="services__tab-content" data-tab-name="2">
+                    <h4 class="services__tab-content-title title--4">
+                      Построение культуры сервиса в компании:
+                    </h4>
+
+                    <ul class="services__tab-content-list">
+                      <li class="services__tab-content-item">
+                        Тренинги, нацеленные на повышение сервиса компании;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Проработка CJM (Customer Journey Map) – Клиентского пути
+                        с наложением на бизнес-процессы компании;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Осуществление замеров по качеству сервису, аналитика
+                        данных, составление дальнейшего пути развития компании.
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#servicesContact"
+                      class="services__tab-content-btn popup-link default-btn"
+                    >
+                      Заказать услугу
+                    </a>
                   </li>
-                  <li class="services__accordion">
-                    <button class="services__accordion-btn">
-                      Управление персоналом
-                    </button>
-                    <div class="services__accordion-content">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Lorem ipsum dolor, sitLorem ipsum dolor, sitLorem ipsum
-                      dolor, sitLorem ipsum dolor, sitLorem ipsum dolor,
-                      sitLorem ipsum dolor, sitLorem ipsum dolor, sitLorem ipsum
-                      dolor, sitLorem ipsum dolor, sitLorem ipsum dolor,
-                      sitLorem ipsum dolor, sitLorem ipsum dolor, sitLorem ipsum
-                      dolor, sitLorem ipsum dolor, sit
-                    </div>
+                  <li class="services__tab-content" data-tab-name="3">
+                    <h4 class="services__tab-content-title title--4">
+                      Управление персоналом:
+                    </h4>
+
+                    <ul class="services__tab-content-list">
+                      <li class="services__tab-content-item">
+                        Разработка HR-стратегии компании, нацеленной на
+                        достижение целевых показателей бизнеса;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Проработка «под ключ» следующих направлений в HR:
+                        рекрутинг, адаптация, обучение и развитие, оценка,
+                        мотивация.
+                      </li>
+                      <li class="services__tab-content-item">
+                        Обучение и развитие HR-команды компании.
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#servicesContact"
+                      class="services__tab-content-btn popup-link default-btn"
+                    >
+                      Заказать услугу
+                    </a>
+                  </li>
+                  <li class="services__tab-content" data-tab-name="4">
+                    <h4 class="services__tab-content-title title--4">
+                      Обучение и развитие персонала:
+                    </h4>
+
+                    <ul class="services__tab-content-list">
+                      <li class="services__tab-content-item">
+                        Тренинги для развития soft-skills:
+                        <br />
+                        Управленческие навыки, Навыки публичного выступления,
+                        Тайм-менеджмент, Коммуникативные навыки, Личная
+                        эффективность, Лидерство, Навык работы с обратной
+                        связью, Адаптивность
+                      </li>
+                      <li class="services__tab-content-item">
+                        Коуч-сессии, помогающие повысить вашу личную
+                        эффективность;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Воркшопы для проработки единого понимания критичных зон
+                        для компании;
+                      </li>
+                      <li class="services__tab-content-item">
+                        Онлайн-марафоны для закрепления полученных на обучении
+                        знаний на практике, даже если команда удалена друг от
+                        друга.
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#servicesContact"
+                      class="services__tab-content-btn popup-link default-btn"
+                    >
+                      Заказать услугу
+                    </a>
                   </li>
                 </ul>
-                <div class="services__bg-item"></div>
               </div>
             </div>
           </div>
@@ -135,7 +244,7 @@
                 <br />
                 <span class="turnkey-solutions__title--accent">Решения</span>
               </h3>
-              <a class="turnkey-solutions__contact-link" href="#">
+              <a class="turnkey-solutions__contact-link btn-accent" href="#">
                 Для заказа здесь и сейчас
               </a>
 
@@ -149,22 +258,140 @@
                       От бизнес цели и дальше
                     </h5>
                     <p class="turnkey-solutions__item-paragraph">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Repellendus quae aspernatur quod natus officia dolore, ex
-                      ullam, corporis animi dolores alias cumque assumenda error
-                      recusandae qui, accusamus rerum eum tenetur?
+                      Программа для комплексной проработки бизнес-цели, задач и
+                      проектов с командой.
                     </p>
                     <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000 T</p>
-                    <a class="turnkey-solutions__item-buy" href="#">
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
                       Купить услугу
                     </a>
                     <a
-                      class="turnkey-solutions__item-download"
+                      class="turnkey-solutions__item-download download-btn"
                       href="#"
                       download
                     >
                       Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="turnkey-solutions__item swiper-slide card">
+                    <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
+                    <h5 class="turnkey-solutions__item-title">
+                      УПРАВЛЕНЧЕСКИЕ НАВЫКИ
+                    </h5>
+                    <p class="turnkey-solutions__item-paragraph">
+                      Программа для руководителей, наполненная инструментами,
+                      которые вы сможете применить уже завтра.
+                    </p>
+                    <p class="turnkey-solutions__item-duration">ОТ 1 НЕДЕЛИ</p>
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
+                      Купить услугу
+                    </a>
+                    <a
+                      class="turnkey-solutions__item-download download-btn"
+                      href="#"
+                      download
+                    >
+                      Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="turnkey-solutions__item swiper-slide card">
+                    <h6 class="turnkey-solutions__item-name">СОПРОВОЖДЕНИЕ</h6>
+                    <h5 class="turnkey-solutions__item-title">
+                      УПРАВЛЕНЧЕСКИЕ НАВЫКИ
+                    </h5>
+                    <p class="turnkey-solutions__item-paragraph">
+                      Программа глубокого погружения в деятельность руководителя
+                      для повышения его эффективности.
+                    </p>
+                    <p class="turnkey-solutions__item-duration">
+                      2 ДНЯ ПО 8 ЧАСОВ
+                    </p>
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
+                      Купить услугу
+                    </a>
+                    <a
+                      class="turnkey-solutions__item-download download-btn"
+                      href="#"
+                      download
+                    >
+                      Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="turnkey-solutions__item swiper-slide card">
+                    <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
+                    <h5 class="turnkey-solutions__item-title">
+                      НАВЫКИ ПУБЛИЧНОГО ВЫСТУПЛЕНИЯ
+                    </h5>
+                    <p class="turnkey-solutions__item-paragraph">
+                      Программа со 100% отработкой полученных знаний в режиме
+                      реального времени.
+                    </p>
+                    <p class="turnkey-solutions__item-duration">16 ЧАСОВ</p>
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
+                      Купить услугу
+                    </a>
+                    <a
+                      class="turnkey-solutions__item-download download-btn"
+                      href="#"
+                      download
+                    >
+                      Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
                     </a>
                   </li>
                   <li class="turnkey-solutions__item swiper-slide card">
@@ -175,126 +402,140 @@
                       От бизнес цели и дальше
                     </h5>
                     <p class="turnkey-solutions__item-paragraph">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Repellendus quae aspernatur quod natus officia dolore, ex
-                      ullam, corporis animi dolores alias cumque assumenda error
-                      recusandae qui, accusamus rerum eum tenetur?
+                      Программа для комплексной проработки бизнес-цели, задач и
+                      проектов с командой.
                     </p>
                     <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000 T</p>
-                    <a class="turnkey-solutions__item-buy" href="#">
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
                       Купить услугу
                     </a>
                     <a
-                      class="turnkey-solutions__item-download"
+                      class="turnkey-solutions__item-download download-btn"
                       href="#"
                       download
                     >
                       Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
                     </a>
                   </li>
                   <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">
-                      Стратегическая сессия
-                    </h6>
+                    <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
                     <h5 class="turnkey-solutions__item-title">
-                      От бизнес цели и дальше
+                      УПРАВЛЕНЧЕСКИЕ НАВЫКИ
                     </h5>
                     <p class="turnkey-solutions__item-paragraph">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Repellendus quae aspernatur quod natus officia dolore, ex
-                      ullam, corporis animi dolores alias cumque assumenda error
-                      recusandae qui, accusamus rerum eum tenetur?
+                      Программа для руководителей, наполненная инструментами,
+                      которые вы сможете применить уже завтра.
                     </p>
-                    <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000 T</p>
-                    <a class="turnkey-solutions__item-buy" href="#">
+                    <p class="turnkey-solutions__item-duration">ОТ 1 НЕДЕЛИ</p>
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
                       Купить услугу
                     </a>
                     <a
-                      class="turnkey-solutions__item-download"
+                      class="turnkey-solutions__item-download download-btn"
                       href="#"
                       download
                     >
                       Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
                     </a>
                   </li>
                   <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">
-                      Стратегическая сессия
-                    </h6>
+                    <h6 class="turnkey-solutions__item-name">СОПРОВОЖДЕНИЕ</h6>
                     <h5 class="turnkey-solutions__item-title">
-                      От бизнес цели и дальше
+                      УПРАВЛЕНЧЕСКИЕ НАВЫКИ
                     </h5>
                     <p class="turnkey-solutions__item-paragraph">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Repellendus quae aspernatur quod natus officia dolore, ex
-                      ullam, corporis animi dolores alias cumque assumenda error
-                      recusandae qui, accusamus rerum eum tenetur?
+                      Программа глубокого погружения в деятельность руководителя
+                      для повышения его эффективности.
                     </p>
-                    <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000 T</p>
-                    <a class="turnkey-solutions__item-buy" href="#">
+                    <p class="turnkey-solutions__item-duration">
+                      2 ДНЯ ПО 8 ЧАСОВ
+                    </p>
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
                       Купить услугу
                     </a>
                     <a
-                      class="turnkey-solutions__item-download"
+                      class="turnkey-solutions__item-download download-btn"
                       href="#"
                       download
                     >
                       Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
                     </a>
                   </li>
                   <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">
-                      Стратегическая сессия
-                    </h6>
+                    <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
                     <h5 class="turnkey-solutions__item-title">
-                      От бизнес цели и дальше
+                      НАВЫКИ ПУБЛИЧНОГО ВЫСТУПЛЕНИЯ
                     </h5>
                     <p class="turnkey-solutions__item-paragraph">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Repellendus quae aspernatur quod natus officia dolore, ex
-                      ullam, corporis animi dolores alias cumque assumenda error
-                      recusandae qui, accusamus rerum eum tenetur?
+                      Программа со 100% отработкой полученных знаний в режиме
+                      реального времени.
                     </p>
-                    <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000 T</p>
-                    <a class="turnkey-solutions__item-buy" href="#">
+                    <p class="turnkey-solutions__item-duration">16 ЧАСОВ</p>
+                    <p class="turnkey-solutions__item-price">1 000 000</p>
+                    <a class="turnkey-solutions__item-buy default-btn" href="#">
                       Купить услугу
                     </a>
                     <a
-                      class="turnkey-solutions__item-download"
+                      class="turnkey-solutions__item-download download-btn"
                       href="#"
                       download
                     >
                       Программа
-                    </a>
-                  </li>
-                  <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">
-                      Стратегическая сессия
-                    </h6>
-                    <h5 class="turnkey-solutions__item-title">
-                      От бизнес цели и дальше
-                    </h5>
-                    <p class="turnkey-solutions__item-paragraph">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Repellendus quae aspernatur quod natus officia dolore, ex
-                      ullam, corporis animi dolores alias cumque assumenda error
-                      recusandae qui, accusamus rerum eum tenetur?
-                    </p>
-                    <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000 T</p>
-                    <a class="turnkey-solutions__item-buy" href="#">
-                      Купить услугу
-                    </a>
-                    <a
-                      class="turnkey-solutions__item-download"
-                      href="#"
-                      download
-                    >
-                      Программа
+                      <span class="download-btn__icon">
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                          />
+                        </svg>
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -997,7 +1238,16 @@
       </div>
       <div class="popup" id="test1">
         <div class="popup__body popup-close">
-          <div class="popup__content">test</div>
+          <div class="popup__content">tes</div>
+        </div>
+      </div>
+
+      <div class="popup" id="servicesContact">
+        <div class="popup__body">
+          <div class="popup__content">
+            servicesContact
+            <button class="popup-close">close</button>
+          </div>
         </div>
       </div>
     </div>

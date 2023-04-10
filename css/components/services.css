@@ -1,70 +1,91 @@
 .services__inner {
-  margin-bottom: 50px;
+  margin-bottom: 118px;
 }
 .services__top {
   display: flex;
   align-items: center;
   flex-direction: row;
 
-  margin-bottom: 30px;
+  margin-bottom: 46px;
 }
 .services__title {
   position: relative;
+  margin-right: 30px;
 }
 
 .services__line {
   width: 100%;
-  height: 1px;
+  height: 3px;
   background-color: var(--color-accent-2);
 }
 
-.services__box {
+.services__tabs {
   display: grid;
-  grid-template-columns: 1fr 0.0001fr;
+  grid-template-columns: minmax(330px, 630px) minmax(300px, 545px);
+  grid-gap: 60px;
 }
-.services__list {
-  position: relative;
-}
-
-.services__accordion {
-  display: flex;
-}
-.services__accordion-btn {
-  padding: 20px;
+.services__tab-btn {
+  padding: 21px 10px 18px 10px;
   margin-bottom: 20px;
-  max-width: 600px;
+  max-width: 630px;
   width: 100%;
+  border-radius: var(--border-radius-card);
+
+  font-family: "Actay";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
 
   text-align: center;
-  font-size: 18px;
 
+  color: #ffffff;
   color: var(--color-text-2);
   background-color: var(--color-text-1);
 
-  transition: all, 0.3s;
+  transition: all, 0.5s;
 }
-.services__accordion-content {
-  position: absolute;
-  max-width: 300px;
-  right: 0;
-  top: 0;
+.services__tab-btn.services__tab--active {
+  color: var(--color-text-1);
+  background-color: var(--color-accent-1);
+}
+
+.services__tab-content {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  padding: 0 20px;
   will-change: max-height;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
   box-sizing: content-box;
 }
-.services__bg-item {
-  transition: all 0.3s ease-out;
-  box-sizing: content-box;
-}
-.services__accordion--open .services__accordion-content {
+.services__tab-content.services__tab--active {
   opacity: 1;
-  background-color: blue;
+  max-height: 100%;
 }
-.services__accordion--open .services__accordion-btn {
+
+.services__tab-content-title {
+  margin-bottom: 10px;
+}
+.services__tab-content-list {
+  margin-bottom: 33px;
+}
+.services__tab-content-item {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 10px;
+  line-height: 130%;
+
+  letter-spacing: 0.001em;
+
   color: var(--color-text-1);
-  background-color: var(--color-accent-1);
+}
+.services__tab-content-item::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: var(--color-text-1);
 }
