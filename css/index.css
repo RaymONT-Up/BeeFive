@@ -22,7 +22,6 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 110%;
-  letter-spacing: -0.02em;
 
   color: var(--color-text-1);
   background-color: var(--color-body-bg);
@@ -103,7 +102,7 @@ body.body-lock {
 }
 .download-btn {
   box-sizing: border-box;
-  padding: 16px 40px;
+  padding: 16px 37px;
   border-radius: var(--border-radius-card);
   border: 1px solid var(--color-text-2);
 
@@ -182,15 +181,25 @@ body.body-lock {
   transform: rotate(0deg);
 }
 /* Titles */
+
 .title--1 {
-}
-.title--2 {
   text-transform: uppercase;
   font-size: 80px;
   font-weight: 700;
   font-family: "Syncopate";
   line-height: 130%;
   letter-spacing: -0.02em;
+}
+.title--2 {
+  font-family: "Syncopate";
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  text-transform: uppercase;
+
+  letter-spacing: -0.02em;
+
+  color: var(--color-text-1);
 }
 .title--3 {
   letter-spacing: -0.01em;
@@ -207,6 +216,29 @@ body.body-lock {
   font-size: 25px;
   line-height: 110%;
   letter-spacing: 0;
+}
+
+/* List */
+.list-check {
+  list-style: none;
+}
+
+.list-check__item {
+  position: relative;
+  padding-left: 28px;
+}
+.list-check__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(./../images/icons/check.svg);
+  background-repeat: no-repeat;
+}
+.list-check__item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 /* Card */
@@ -265,6 +297,41 @@ body.body-lock {
 .slider-arrow--prev.swiper-button-disabled,
 .slider-arrow--next.swiper-button-disabled {
   opacity: 0.5;
+}
+
+/* Slider pagination */
+.slider-pagination {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin: 0 20px;
+}
+.slider-pagination .swiper-pagination-bullet {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 10px;
+
+  font-family: "Syncopate";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+
+  letter-spacing: -0.02em;
+
+  color: var(--color-text-1);
+  background-color: transparent;
+
+  transition: all, 0.3s;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Modal Window */
