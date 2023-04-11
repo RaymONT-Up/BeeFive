@@ -1,15 +1,14 @@
-.cases {
-}
 .cases__inner {
   margin-bottom: 100px;
 }
 .cases__title {
-  margin-bottom: 20px;
+  margin-bottom: 48px;
 }
 .cases__slider {
+  padding-top: 30px;
 }
 .cases__list {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .cases__slider-navigation {
   display: flex;
@@ -22,16 +21,51 @@
 
 /* Item */
 .cases__item {
-  padding-top: 30px;
+  box-sizing: border-box;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-top: 57px;
+  padding-left: 31px;
+  padding-bottom: 56px;
+  min-height: 363px;
+}
+.cases__item::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -0.5%;
+  right: 0;
+  bottom: 0;
+  height: 110%;
+
+  background-image: url(./../../images/icons/cases-border.svg);
+  background-repeat: no-repeat;
 }
 .cases__item-name {
   position: absolute;
-  top: 10px;
-  color: var(--color-text-1);
-  background-color: var(--color-text-2);
+  top: -7%;
+  left: 0;
+  padding: 14px 30px;
+  border-radius: var(--border-radius-card);
+
+  letter-spacing: 0px;
+  text-align: center;
+
+  color: var(--color-text-3);
+  background-color: var(--color-text-1);
 }
 .cases__item-paragraph {
+  margin: -2px 0 20px 0;
+  max-width: 317px;
+
+  letter-spacing: 0;
+
+  line-height: 130%;
 }
 .cases__item-btn {
+  margin-top: auto;
 }

@@ -47,7 +47,7 @@ const turnkeySolutionsSlider = new Swiper(".turnkey-solutions__slider", {
 // Cases slider
 const casesSlider = new Swiper(".cases__slider", {
   slidesPerView: 3,
-  spaceBetween: 20,
+  spaceBetween: 76.5,
 
   navigation: {
     nextEl: ".cases__slider-arrow--next",

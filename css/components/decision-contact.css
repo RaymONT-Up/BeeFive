@@ -1,17 +1,46 @@
-.decision-contact {
-}
 .decision-contact__inner {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 142px;
 }
 .decision-contact__title {
+  font-size: 60px;
+  line-height: 110%;
+  letter-spacing: 0;
 }
 .decision-contact__arrow {
+  display: inline-block;
+  margin-left: -0.1em;
 }
 .decision-contact__toggle {
+  position: relative;
+  display: inline-block;
+  margin-right: -3px;
+  background-color: var(--color-text-1);
+  width: 130px;
+  height: 42px;
+  border-radius: var(--border-radius-big);
+}
+.decision-contact__toggle::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--color-text-3);
+  top: -14%;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  height: 120%;
+  border-radius: 100%;
+  background-color: var(--color-accent-1);
+
+  transition: all, 0.5s;
+  transform: translateX(0);
+}
+.decision-contact__toggle:hover::after {
+  transform: translateX(120%);
 }
 .decision-contact__btn {
+  padding: 21px 37px;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 13%;
 }
