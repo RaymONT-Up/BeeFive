@@ -45,8 +45,11 @@
   color: var(--color-text-2);
 }
 .individual-solution__btn {
-  padding: 22px 37px;
+  padding: 22px;
   border: 2px solid var(--color-text-4);
+  max-width: 345px;
+  width: 100%;
+  text-align: center;
 }
 
 /* Decor */

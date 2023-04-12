@@ -49,6 +49,7 @@
   max-width: 376px;
 }
 .reviews__item-video-wrapper {
+  display: block;
   position: relative;
   max-width: 286px;
   max-height: 286px;
@@ -127,11 +128,15 @@
 .reviews__item-stars[data-review-total-value="5"]
   .reviews__item-star:nth-child(n + 1) {
   fill: var(--color-accent-1);
+  stroke-width: 1px;
+  stroke: transparent;
 }
 .reviews__item-star {
   display: block;
   margin: 0 4px 0 0;
-  fill: var(--color-text-3);
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: var(--color-text-4);
 }
 
 .reviews__item-paragraph {

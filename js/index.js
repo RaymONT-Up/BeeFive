@@ -1,3 +1,7 @@
+// FancyBox Init
+Fancybox.bind('[data-fancybox="gallery"]', {});
+Fancybox.bind("[data-fancybox='reviews']", {});
+
 // Services tabs
 document.addEventListener("DOMContentLoaded", () => {});
 const servicesTabs = () => {
