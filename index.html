@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeeFive</title>
 
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Swiper css -->
     <link
       rel="stylesheet"
@@ -79,13 +82,41 @@
                 развития
               </h1>
               <ul class="hero__list">
-                <li class="hero__item">
+                <li
+                  class="hero__item"
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                >
                   ПОВЫШЕНИЕ ЛОЯЛЬНОСТИ КЛИЕНТОВ И СОТРУДНИКОВ
                 </li>
-                <li class="hero__item">СНИЖЕНИЕ ТЕКУЧЕСТИ ПЕРСОНАЛА</li>
-                <li class="hero__item">УВЕЛИЧЕНИЕ ПРОДАЖ</li>
-                <li class="hero__item">ПОВЫШЕНИЕ ЭФФЕКТИВНОСТИ КОМАНДЫ</li>
-                <li class="hero__item">ТРАНСЛИРОВАНИЕ БИЗНЕС-ЦЕЛИ</li>
+                <li
+                  class="hero__item"
+                  data-aos="fade-left"
+                  data-aos-delay="600"
+                >
+                  СНИЖЕНИЕ ТЕКУЧЕСТИ ПЕРСОНАЛА
+                </li>
+                <li
+                  class="hero__item"
+                  data-aos="fade-right"
+                  data-aos-delay="1100"
+                >
+                  УВЕЛИЧЕНИЕ ПРОДАЖ
+                </li>
+                <li
+                  class="hero__item"
+                  data-aos="fade-right"
+                  data-aos-delay="2100"
+                >
+                  ПОВЫШЕНИЕ ЭФФЕКТИВНОСТИ КОМАНДЫ
+                </li>
+                <li
+                  class="hero__item"
+                  data-aos="fade-left"
+                  data-aos-delay="1600"
+                >
+                  ТРАНСЛИРОВАНИЕ БИЗНЕС-ЦЕЛИ
+                </li>
               </ul>
             </div>
             <div class="hero__decor hero__decor--1">
@@ -272,161 +303,189 @@
 
               <div class="turnkey-solutions__slider swiper">
                 <ul class="turnkey-solutions__list swiper-wrapper">
-                  <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">
-                      Стратегическая сессия
-                    </h6>
-                    <h5 class="turnkey-solutions__item-title">
-                      От бизнес цели и дальше
-                    </h5>
-                    <p class="turnkey-solutions__item-paragraph">
-                      Программа для комплексной проработки бизнес-цели, задач и
-                      проектов с командой.
-                    </p>
-                    <p class="turnkey-solutions__item-duration">16 Часов</p>
-                    <p class="turnkey-solutions__item-price">1 000 000</p>
-                    <a
-                      class="turnkey-solutions__item-buy default-btn popup-link"
-                      href="#contact2"
+                  <li class="swiper-slide">
+                    <div
+                      class="turnkey-solutions__item card"
+                      data-aos="fade-down"
+                      data-aos-duration="700"
                     >
-                      Купить услугу
-                    </a>
-                    <a
-                      class="turnkey-solutions__item-download download-btn"
-                      href="#"
-                      download
-                    >
-                      Программа
-                      <span class="download-btn__icon">
-                        <svg
-                          width="17"
-                          height="17"
-                          viewBox="0 0 17 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
-                          />
-                        </svg>
-                      </span>
-                    </a>
+                      <h6 class="turnkey-solutions__item-name">
+                        Стратегическая сессия
+                      </h6>
+                      <h5 class="turnkey-solutions__item-title">
+                        От бизнес цели и дальше
+                      </h5>
+                      <p class="turnkey-solutions__item-paragraph">
+                        Программа для комплексной проработки бизнес-цели, задач
+                        и проектов с командой.
+                      </p>
+                      <p class="turnkey-solutions__item-duration">16 Часов</p>
+                      <p class="turnkey-solutions__item-price">1 000 000</p>
+                      <a
+                        class="turnkey-solutions__item-buy default-btn popup-link"
+                        href="#contact2"
+                      >
+                        Купить услугу
+                      </a>
+                      <a
+                        class="turnkey-solutions__item-download download-btn"
+                        href="#"
+                        download
+                      >
+                        Программа
+                        <span class="download-btn__icon">
+                          <svg
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </li>
-                  <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
-                    <h5 class="turnkey-solutions__item-title">
-                      УПРАВЛЕНЧЕСКИЕ НАВЫКИ
-                    </h5>
-                    <p class="turnkey-solutions__item-paragraph">
-                      Программа для руководителей, наполненная инструментами,
-                      которые вы сможете применить уже завтра.
-                    </p>
-                    <p class="turnkey-solutions__item-duration">ОТ 1 НЕДЕЛИ</p>
-                    <p class="turnkey-solutions__item-price">1 000 000</p>
-                    <a
-                      class="turnkey-solutions__item-buy default-btn popup-link"
-                      href="#contact2"
+                  <li class="swiper-slide">
+                    <div
+                      class="turnkey-solutions__item card"
+                      data-aos="fade-up"
+                      data-aos-duration="700"
                     >
-                      Купить услугу
-                    </a>
-                    <a
-                      class="turnkey-solutions__item-download download-btn"
-                      href="#"
-                      download
-                    >
-                      Программа
-                      <span class="download-btn__icon">
-                        <svg
-                          width="17"
-                          height="17"
-                          viewBox="0 0 17 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
-                          />
-                        </svg>
-                      </span>
-                    </a>
+                      <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
+                      <h5 class="turnkey-solutions__item-title">
+                        УПРАВЛЕНЧЕСКИЕ НАВЫКИ
+                      </h5>
+                      <p class="turnkey-solutions__item-paragraph">
+                        Программа для руководителей, наполненная инструментами,
+                        которые вы сможете применить уже завтра.
+                      </p>
+                      <p class="turnkey-solutions__item-duration">
+                        ОТ 1 НЕДЕЛИ
+                      </p>
+                      <p class="turnkey-solutions__item-price">1 000 000</p>
+                      <a
+                        class="turnkey-solutions__item-buy default-btn popup-link"
+                        href="#contact2"
+                      >
+                        Купить услугу
+                      </a>
+                      <a
+                        class="turnkey-solutions__item-download download-btn"
+                        href="#"
+                        download
+                      >
+                        Программа
+                        <span class="download-btn__icon">
+                          <svg
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </li>
-                  <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">СОПРОВОЖДЕНИЕ</h6>
-                    <h5 class="turnkey-solutions__item-title">
-                      УПРАВЛЕНЧЕСКИЕ НАВЫКИ
-                    </h5>
-                    <p class="turnkey-solutions__item-paragraph">
-                      Программа глубокого погружения в деятельность руководителя
-                      для повышения его эффективности.
-                    </p>
-                    <p class="turnkey-solutions__item-duration">
-                      2 ДНЯ ПО 8 ЧАСОВ
-                    </p>
-                    <p class="turnkey-solutions__item-price">1 000 000</p>
-                    <a
-                      class="turnkey-solutions__item-buy default-btn popup-link"
-                      href="#contact2"
+                  <li class="swiper-slide">
+                    <div
+                      class="turnkey-solutions__item card"
+                      data-aos="fade-down"
+                      data-aos-duration="700"
                     >
-                      Купить услугу
-                    </a>
-                    <a
-                      class="turnkey-solutions__item-download download-btn"
-                      href="#"
-                      download
-                    >
-                      Программа
-                      <span class="download-btn__icon">
-                        <svg
-                          width="17"
-                          height="17"
-                          viewBox="0 0 17 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
-                          />
-                        </svg>
-                      </span>
-                    </a>
+                      <h6 class="turnkey-solutions__item-name">
+                        СОПРОВОЖДЕНИЕ
+                      </h6>
+                      <h5 class="turnkey-solutions__item-title">
+                        УПРАВЛЕНЧЕСКИЕ НАВЫКИ
+                      </h5>
+                      <p class="turnkey-solutions__item-paragraph">
+                        Программа глубокого погружения в деятельность
+                        руководителя для повышения его эффективности.
+                      </p>
+                      <p class="turnkey-solutions__item-duration">
+                        2 ДНЯ ПО 8 ЧАСОВ
+                      </p>
+                      <p class="turnkey-solutions__item-price">1 000 000</p>
+                      <a
+                        class="turnkey-solutions__item-buy default-btn popup-link"
+                        href="#contact2"
+                      >
+                        Купить услугу
+                      </a>
+                      <a
+                        class="turnkey-solutions__item-download download-btn"
+                        href="#"
+                        download
+                      >
+                        Программа
+                        <span class="download-btn__icon">
+                          <svg
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </li>
-                  <li class="turnkey-solutions__item swiper-slide card">
-                    <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
-                    <h5 class="turnkey-solutions__item-title">
-                      НАВЫКИ ПУБЛИЧНОГО ВЫСТУПЛЕНИЯ
-                    </h5>
-                    <p class="turnkey-solutions__item-paragraph">
-                      Программа со 100% отработкой полученных знаний в режиме
-                      реального времени.
-                    </p>
-                    <p class="turnkey-solutions__item-duration">16 ЧАСОВ</p>
-                    <p class="turnkey-solutions__item-price">1 000 000</p>
-                    <a
-                      class="turnkey-solutions__item-buy default-btn popup-link"
-                      href="#contact2"
-                    >
-                      Купить услугу
-                    </a>
-                    <a
-                      class="turnkey-solutions__item-download download-btn"
-                      href="#"
-                      download
-                    >
-                      Программа
-                      <span class="download-btn__icon">
-                        <svg
-                          width="17"
-                          height="17"
-                          viewBox="0 0 17 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
-                          />
-                        </svg>
-                      </span>
-                    </a>
+                  <li
+                    class="swiper-slide"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                  >
+                    <div class="turnkey-solutions__item card">
+                      <h6 class="turnkey-solutions__item-name">ТРЕНИНГ</h6>
+                      <h5 class="turnkey-solutions__item-title">
+                        НАВЫКИ ПУБЛИЧНОГО ВЫСТУПЛЕНИЯ
+                      </h5>
+                      <p class="turnkey-solutions__item-paragraph">
+                        Программа со 100% отработкой полученных знаний в режиме
+                        реального времени.
+                      </p>
+                      <p class="turnkey-solutions__item-duration">16 ЧАСОВ</p>
+                      <p class="turnkey-solutions__item-price">1 000 000</p>
+                      <a
+                        class="turnkey-solutions__item-buy default-btn popup-link"
+                        href="#contact2"
+                      >
+                        Купить услугу
+                      </a>
+                      <a
+                        class="turnkey-solutions__item-download download-btn"
+                        href="#"
+                        download
+                      >
+                        Программа
+                        <span class="download-btn__icon">
+                          <svg
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2.74048 16.998C2.19048 16.998 1.71981 16.8024 1.32848 16.411C0.936478 16.019 0.740479 15.548 0.740479 14.998V11.998H2.74048V14.998H14.7405V11.998H16.7405V14.998C16.7405 15.548 16.5448 16.019 16.1535 16.411C15.7615 16.8024 15.2905 16.998 14.7405 16.998H2.74048ZM8.74048 12.998L3.74048 7.99805L5.14048 6.54805L7.74048 9.14805V0.998047H9.74048V9.14805L12.3405 6.54805L13.7405 7.99805L8.74048 12.998Z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </li>
                   <li class="turnkey-solutions__item swiper-slide card">
                     <h6 class="turnkey-solutions__item-name">
@@ -611,10 +670,17 @@
           <div class="container">
             <div class="decision-contact__inner">
               <p class="decision-contact__title title--2">
-                ОПИШИТЕ ВАШУ ПРОБЛЕМУ,
+                <span data-aos="fade-right">ОПИШИТЕ ВАШУ ПРОБЛЕМУ,</span>
+
                 <br />
-                И МЫ ПОМОЖЕМ
-                <span class="decision-contact__arrow">
+                <span data-aos="fade-right" data-aos-delay="800">
+                  И МЫ ПОМОЖЕМ
+                </span>
+                <span
+                  data-aos="fade-right"
+                  data-aos-delay="2000"
+                  class="decision-contact__arrow"
+                >
                   <svg
                     width="132"
                     height="30"
@@ -629,8 +695,16 @@
                   </svg>
                 </span>
                 <br />
-                <span class="decision-contact__toggle"></span>
-                НАЙТИ РЕШЕНИЕ
+                <span
+                  class="decision-contact__toggle"
+                  data-aos="fade-right"
+                  data-aos-delay="2500"
+                >
+                  <span class="decision-contact__toggle-icon"></span>
+                </span>
+                <span data-aos="fade-right" data-aos-delay="1400">
+                  НАЙТИ РЕШЕНИЕ
+                </span>
               </p>
               <a
                 class="decision-contact__btn btn-big popup-link"
@@ -2662,12 +2736,15 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+    <script src="./js/animation.js"></script>
     <script src="./js/index.js"></script>
+
     <script src="./js/popups.js"></script>
-    <script src="./js/gallery.js"></script>
   </body>
 </html>

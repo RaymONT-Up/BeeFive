@@ -40,3 +40,17 @@
   max-width: 361px;
   width: 100%;
 }
+
+@media (max-width: 1310px) {
+  .header__nav {
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+  .header__list-item {
+    margin-right: 20px;
+  }
+  .header__list-link,
+  .header__phone {
+    font-size: 16px;
+  }
+}
