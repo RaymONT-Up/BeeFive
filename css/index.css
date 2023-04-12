@@ -26,6 +26,9 @@ body {
   color: var(--color-text-1);
   background-color: var(--color-body-bg);
 }
+.wrapper {
+  overflow: hidden;
+}
 body.body-lock {
   overflow: hidden;
 }
@@ -43,6 +46,7 @@ body.body-lock {
 }
 /* Global */
 .container {
+  position: relative;
   box-sizing: border-box;
   max-width: 1310px;
   padding: 0 15px;

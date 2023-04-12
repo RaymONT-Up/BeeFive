@@ -2,6 +2,8 @@
   color: var(--color-text-1);
 }
 .footer__inner {
+  position: relative;
+  z-index: 5;
   margin-bottom: 100px;
 }
 .footer__top {
@@ -111,4 +113,18 @@
   text-align: center;
 
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Decor */
+.footer__decor {
+  position: absolute;
+  z-index: 0;
+}
+.footer__decor--1 {
+  top: -108%;
+  left: 30%;
+}
+.footer__decor--2 {
+  left: -10%;
+  top: -40%;
 }

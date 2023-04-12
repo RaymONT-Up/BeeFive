@@ -1,6 +1,8 @@
 .header {
 }
 .header__inner {
+  position: relative;
+  z-index: 6;
   display: flex;
   flex-direction: row;
 

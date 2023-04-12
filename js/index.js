@@ -1,4 +1,5 @@
 // Services tabs
+document.addEventListener("DOMContentLoaded", () => {});
 const servicesTabs = () => {
   const tabControlersList = document.querySelectorAll(".services__tab-btn");
   const tabContentList = document.querySelectorAll(".services__tab-content");
@@ -6,7 +7,8 @@ const servicesTabs = () => {
   const initTab = document.querySelector(
     ".services__tab-content.services__tab--active"
   );
-  initTab.style.maxHeight = `100%`;
+
+  initTab.style.maxHeight = initTab.style.maxHeight = `325px`;
 
   tabControlersList.forEach(item => {
     item.addEventListener("click", e => {

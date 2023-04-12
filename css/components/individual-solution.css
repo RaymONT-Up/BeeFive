@@ -1,8 +1,10 @@
 .individual-solution__inner {
+  position: relative;
+  z-index: 5;
   padding: 64px 110px 60px 110px;
   margin-bottom: 150px;
   border-radius: var(--border-radius-1);
-  border: 1px solid var(--color-accent-1);
+  border: 2px solid var(--color-accent-1);
 
   background-color: var(--color-text-1);
 }
@@ -45,4 +47,22 @@
 .individual-solution__btn {
   padding: 22px 37px;
   border: 2px solid var(--color-text-4);
+}
+
+/* Decor */
+.individual-solution__decor {
+  position: absolute;
+  z-index: 0;
+}
+.individual-solution__decor--1 {
+  top: -39%;
+  left: 18%;
+}
+.individual-solution__decor--2 {
+  bottom: -35%;
+  right: 0%;
+}
+.individual-solution__decor--3 {
+  bottom: -35%;
+  left: 14%;
 }

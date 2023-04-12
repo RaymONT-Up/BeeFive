@@ -1,4 +1,6 @@
 .advantages__inner {
+  position: relative;
+  z-index: 5;
   margin-bottom: 101px;
 }
 .advantages__title {
@@ -51,4 +53,14 @@
 }
 .advantages__item-text--accent {
   color: var(--color-accent-1);
+}
+
+/* Decor */
+.advantages__decor {
+  position: absolute;
+  z-index: 0;
+}
+.advantages__decor--1 {
+  top: -49%;
+  right: -10%;
 }

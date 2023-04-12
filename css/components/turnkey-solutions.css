@@ -1,5 +1,7 @@
 .turnkey-solutions__inner {
   margin-bottom: 140px;
+  position: relative;
+  z-index: 5;
 }
 .turnkey-solutions__title {
   margin-bottom: 10px;
@@ -113,4 +115,22 @@
 }
 .turnkey-solutions__slider-arrow--prev {
   margin-right: 15px;
+}
+
+.turnkey-solutions__decor {
+  position: absolute;
+  z-index: 0;
+}
+.turnkey-solutions__decor--1 {
+  top: -23%;
+  left: -11%;
+}
+
+.turnkey-solutions__decor--2 {
+  bottom: -8%;
+  left: -6%;
+}
+.turnkey-solutions__decor--3 {
+  bottom: -55%;
+  right: -14%;
 }

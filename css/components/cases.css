@@ -1,4 +1,6 @@
 .cases__inner {
+  position: relative;
+  z-index: 5;
   margin-bottom: 126px;
 }
 .cases__title {
@@ -40,7 +42,7 @@
   left: -0.5%;
   right: 0;
   bottom: 0;
-  height: 110%;
+  height: 100%;
 
   background-image: url(./../../images/icons/cases-border.svg);
   background-repeat: no-repeat;
@@ -48,7 +50,7 @@
 .cases__item-name {
   position: absolute;
   top: -7%;
-  left: 0;
+  left: -0.5%;
   padding: 14px 30px;
   border-radius: var(--border-radius-card);
 
@@ -68,4 +70,22 @@
 }
 .cases__item-btn {
   margin-top: auto;
+}
+
+/* Decor */
+.cases__decor {
+  position: absolute;
+  z-index: 0;
+}
+.cases__decor--1 {
+  top: 6%;
+  right: 10%;
+}
+.cases__decor--2 {
+  top: 7%;
+  left: -30%;
+}
+.cases__decor--3 {
+  bottom: -30%;
+  right: -10%;
 }

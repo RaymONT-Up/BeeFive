@@ -1,4 +1,12 @@
+.hero {
+  position: relative;
+}
+.container {
+  position: relative;
+}
 .hero__inner {
+  position: relative;
+  z-index: 5;
   padding-top: 50px;
   margin-bottom: 130px;
 }
@@ -55,4 +63,22 @@
 }
 .hero__item:nth-child(4) {
   grid-column: 2/4;
+}
+
+/* Decor */
+.hero__decor {
+  position: absolute;
+  z-index: 0;
+}
+.hero__decor--1 {
+  top: 18%;
+  right: 3%;
+}
+.hero__decor--2 {
+  top: -35%;
+  left: 3%;
+}
+.hero__decor--3 {
+  bottom: -76%;
+  left: -22%;
 }

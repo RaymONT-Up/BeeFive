@@ -1,4 +1,6 @@
 .articles__inner {
+  position: relative;
+  z-index: 5;
   margin-bottom: 153px;
 }
 .articles__title {
@@ -36,4 +38,22 @@
 .slider-pagination.articles__slider-pagination {
   display: flex;
   width: fit-content;
+}
+
+/* Decor */
+.articles__decor {
+  position: absolute;
+  z-index: 0;
+}
+.articles__decor--1 {
+  top: -7%;
+  left: 14%;
+}
+.articles__decor--2 {
+  top: 29%;
+  right: -26%;
+}
+.articles__decor--3 {
+  bottom: -9%;
+  left: -32%;
 }

@@ -1,4 +1,6 @@
 .services__inner {
+  position: relative;
+  z-index: 5;
   margin-bottom: 118px;
 }
 .services__top {
@@ -88,4 +90,17 @@
   height: 7px;
   border-radius: 100%;
   background-color: var(--color-text-1);
+}
+.services__tab-content-btn {
+  min-height: 50px;
+  box-sizing: border-box;
+}
+/* Decor */
+.services__decor {
+  position: absolute;
+  z-index: 0;
+}
+.services__decor--1 {
+  bottom: -76%;
+  right: -11%;
 }

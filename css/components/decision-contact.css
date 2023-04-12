@@ -1,5 +1,6 @@
 .decision-contact__inner {
   position: relative;
+  z-index: 5;
   margin-bottom: 142px;
 }
 .decision-contact__title {
@@ -42,4 +43,14 @@
   position: absolute;
   right: 0;
   bottom: 13%;
+}
+
+/* Decor */
+.decision-contact__decor {
+  position: absolute;
+  z-index: 0;
+}
+.decision-contact__decor--1 {
+  left: 0;
+  top: -70%;
 }

@@ -1,5 +1,7 @@
 .about-company__inner {
   margin-bottom: 90px;
+  position: relative;
+  z-index: 5;
 }
 .about-company__title {
   margin-bottom: 56px;
@@ -172,4 +174,23 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
+}
+
+/* Decor */
+.about-company__decor {
+  position: absolute;
+  z-index: 0;
+}
+.about-company__decor--1 {
+  top: 32%;
+  left: -31%;
+}
+
+.about-company__decor--2 {
+  top: 9%;
+  right: -20%;
+}
+.about-company__decor--3 {
+  bottom: -7%;
+  right: 38%;
 }

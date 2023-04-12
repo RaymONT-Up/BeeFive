@@ -1,6 +1,13 @@
 .reviews__inner {
+  position: relative;
+
   margin-bottom: 143px;
 }
+.reviews .container {
+  z-index: 5;
+  position: relative;
+}
+
 .reviews__title {
   text-align: right;
 }
@@ -12,6 +19,8 @@
 }
 
 .reviews__slider-container {
+  position: relative;
+  z-index: 5;
   max-width: 1372px;
   padding-left: 5.5%;
   margin: 64px auto 0 auto;
@@ -145,4 +154,23 @@
   line-height: 110%;
 
   color: var(--color-text-4);
+}
+
+/* Decor */
+.reviews__decor {
+  position: absolute;
+  z-index: 0;
+}
+.reviews__decor--1 {
+  top: -20%;
+  left: 26%;
+}
+
+.reviews__decor--2 {
+  bottom: -40%;
+  left: 7%;
+}
+.reviews__decor--3 {
+  bottom: -38%;
+  right: 21%;
 }
