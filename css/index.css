@@ -129,7 +129,6 @@ body.body-lock {
   display: block;
   box-sizing: border-box;
   padding: 36px 45px;
-  border: 1px solid var(--color-main-text);
   border-radius: var(--border-radius-card);
   border: 1px solid var(--color-text-1);
 

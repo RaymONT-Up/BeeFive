@@ -1,22 +1,39 @@
-.articles {
-}
 .articles__inner {
-  margin-bottom: 50px;
+  margin-bottom: 153px;
 }
 .articles__title {
-  font-size: 16px;
-  margin-bottom: 1em;
+  line-height: 102%;
+  margin-bottom: 0.63em;
 }
 .articles__title--accent {
-  margin-left: 1.5em;
+  margin-left: 1.6em;
 }
-.articles__slider {
+.articles__list {
+  margin-bottom: 40px;
 }
 .articles__item {
+  padding: 40px 30px;
 }
 .articles__item-time {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0;
 }
 .articles__item-paragraph {
+  line-height: 130%;
+  margin-right: -10px;
+  margin-bottom: 35px;
 }
-.articles__item-btn {
+
+.articles__slider-navigation {
+  justify-content: center;
+}
+.slider-pagination.articles__slider-pagination {
+  display: flex;
+  width: fit-content;
 }

@@ -1,32 +1,114 @@
 .footer {
+  color: var(--color-text-1);
 }
 .footer__inner {
+  margin-bottom: 100px;
 }
 .footer__top {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 0.8fr 0.2fr;
   grid-gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-.footer__box {
+.footer__box:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__box:nth-child(4) {
+  margin-left: 34px;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 61px;
+}
+.footer__paragraph {
+  max-width: 263px;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  font-size: 18px;
+
+  color: rgba(255, 255, 255, 0.8);
 }
 .footer__subtitle {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .footer__item {
   width: 100%;
 }
 .footer__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .footer__link {
   display: block;
   box-sizing: border-box;
   padding: 5px 5px 5px 0;
-  width: 100%;
+}
+.footer__link--confidentiality {
+  margin-top: auto;
+}
+.footer__link::after {
+  content: none;
 }
 .footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 15px;
 }
+.footer__social-item {
+  margin-bottom: 11px;
+}
+.footer__social-item:last-child {
+  margin-bottom: 31px;
+}
+.footer__social-item a {
+  display: block;
+}
+.footer__social-item svg {
+  fill: var(--color-text-1);
+  transition: all, 0.3s;
+}
+.footer__social-item:hover svg {
+  fill: var(--color-accent-1);
+}
+.footer__social-item--facebook rect {
+  fill: none;
+}
+.footer__social-item--facebook rect {
+  stroke: var(--color-text-1);
+  transition: all, 0.3s;
+}
+.footer__social-item--facebook:hover rect {
+  stroke: var(--color-accent-1);
+}
+
+.footer__social-arrow-to-up {
+  margin-top: 21px;
+}
+.footer__social-arrow-to-up svg {
+  fill: var(--color-accent-1);
+
+  transition: all, 0.3s;
+}
+.footer__social-arrow-to-up:hover svg {
+  fill: var(--color-accent-2);
+}
+
 .footer__bottom {
+  max-width: 635px;
+  margin: 0 auto;
+
   text-align: center;
+  font-family: "Actay";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.5);
 }
