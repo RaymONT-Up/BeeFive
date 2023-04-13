@@ -35,6 +35,7 @@
 .gallery__img {
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 /* Decor */
@@ -53,4 +54,34 @@
 .gallery__decor--3 {
   bottom: -52%;
   right: -8%;
+}
+
+@media (max-width: 600px) {
+  .gallery__item:nth-child(1) {
+    margin-top: 9%;
+    grid-area: 3 / 52 / 17 / 30;
+  }
+  .gallery__item:nth-child(2) {
+    grid-area: 1 / 1 / 7 / 28;
+  }
+  .gallery__item:nth-child(3) {
+    margin-top: 17%;
+    grid-area: 35 / 1 / 28 / 20;
+  }
+  .gallery__item:nth-child(4) {
+    grid-area: 20 / 13 / 29 / 52;
+    margin-top: 2%;
+  }
+  .gallery__item:nth-child(5) {
+    margin-top: 11%;
+    grid-area: 35 / 1 / 37 / 22;
+  }
+  .gallery__item:nth-child(6) {
+    margin-top: 0;
+    grid-area: 32 / 24 / 36 / 51;
+  }
+  .gallery__item:nth-child(7) {
+    grid-area: 15 / 1 / 23 / 26;
+    margin-bottom: 28%;
+  }
 }

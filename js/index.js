@@ -39,40 +39,37 @@ const swiper = new Swiper(".hero__slider", {
 
 // Services tabs || accordion for mobile
 if (window.innerWidth > 1000) {
-  const servicesTabs = () => {
-    const tabControlersList = document.querySelectorAll(".services__tab-btn");
-    const tabContentList = document.querySelectorAll(".services__tab-content");
-    let tabName;
-    const initTab = document.querySelector(
-      ".services__tab-content.services__tab--active"
-    );
+  const tabControlersList = document.querySelectorAll(".services__tab-btn");
+  const tabContentList = document.querySelectorAll(".services__tab-content");
+  let tabName;
+  const initTab = document.querySelector(
+    ".services__tab-content.services__tab--active"
+  );
 
-    initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
+  initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
 
-    tabControlersList.forEach(item => {
-      item.addEventListener("click", e => {
-        tabControlersList.forEach(i => {
-          i.classList.remove("services__tab--active");
-        });
-        e.target.classList.add("services__tab--active");
-
-        tabName = e.target.getAttribute("data-tab-name");
-        tabContentChange(tabName);
-      });
-    });
-
-    const tabContentChange = tabName => {
-      tabContentList.forEach(i => {
+  tabControlersList.forEach(item => {
+    item.addEventListener("click", e => {
+      tabControlersList.forEach(i => {
         i.classList.remove("services__tab--active");
-        i.style.maxHeight = `0px`;
       });
-      tabContentList[+tabName - 1].classList.add("services__tab--active");
-      tabContentList[+tabName - 1].style.maxHeight = `${
-        tabContentList[+tabName - 1].scrollHeight
-      }px`;
-    };
+      e.target.classList.add("services__tab--active");
+
+      tabName = e.target.getAttribute("data-tab-name");
+      tabContentChange(tabName);
+    });
+  });
+
+  const tabContentChange = tabName => {
+    tabContentList.forEach(i => {
+      i.classList.remove("services__tab--active");
+      i.style.maxHeight = `0px`;
+    });
+    tabContentList[+tabName - 1].classList.add("services__tab--active");
+    tabContentList[+tabName - 1].style.maxHeight = `${
+      tabContentList[+tabName - 1].scrollHeight
+    }px`;
   };
-  servicesTabs();
 } else {
   const servicesAccordion = () => {
     const accordions = document.querySelectorAll(".services__accordion");
@@ -204,12 +201,56 @@ const casesSlider = new Swiper(".cases__slider", {
 const reviewsSlider = new Swiper(".reviews__slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
-  centeredSlides: true,
   navigation: {
     nextEl: ".reviews__slider-arrow--next",
     prevEl: ".reviews__slider-arrow--prev",
   },
+  breakpoints: {
+    0: {
+      centeredSlides: true,
+    },
+    1000: {
+      centeredSlides: false,
+    },
+  },
 });
+
+// About company tabs
+// if (window.innerWidth > 1000) {
+//   const tabControlersList = document.querySelectorAll(".about-company__tab");
+//   const tabContentList = document.querySelectorAll(
+//     ".about-company__tab-content"
+//   );
+//   let tabName;
+//   const initTab = document.querySelector(
+//     ".about-company__tab-content.about-company__tab--active"
+//   );
+
+//   // initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
+
+//   tabControlersList.forEach(item => {
+//     item.addEventListener("click", e => {
+//       tabControlersList.forEach(i => {
+//         i.classList.remove("about-company__tab--active");
+//       });
+//       e.target.classList.add("about-company__tab--active");
+
+//       tabName = e.target.getAttribute("company-tab-index");
+//       tabContentChange(tabName);
+//     });
+//   });
+
+//   const tabContentChange = tabName => {
+//     tabContentList.forEach(i => {
+//       i.classList.remove("about-company__tab--active");
+//       i.style.maxHeight = `0px`;
+//     });
+//     tabContentList[+tabName - 1].classList.add("about-company__tab--active");
+//     tabContentList[+tabName - 1].style.maxHeight = `${
+//       tabContentList[+tabName - 1].scrollHeight
+//     }px`;
+//   };
+// }
 
 // Articles Slider
 const articlesSlider = new Swiper(".articles__slider", {
@@ -269,6 +310,32 @@ const articlesSlider = new Swiper(".articles__slider", {
 
     //   return paginationHtml;
     // },
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      pagination: {
+        el: ".articles__slider-pagination",
+        type: "fraction",
+      },
+    },
+    460: {
+      slidesPerView: 1.5,
+
+      pagination: {
+        el: ".articles__slider-pagination",
+        type: "fraction",
+      },
+    },
+
+    800: {
+      slidesPerView: 2,
+    },
+
+    1200: {
+      slidesPerView: 3,
+    },
   },
 });
 

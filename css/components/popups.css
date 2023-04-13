@@ -265,7 +265,11 @@
 .popup-article__top {
   margin-bottom: 40px;
 }
-
+.popup-article__date {
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: var(--color-text-4);
+}
 .popup-article__paragraph:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -355,5 +359,112 @@
   font-size: 18px;
   line-height: 130%;
 }
-.popup-feedback__textarea::placeholder {
+
+.popup-feedback__privacy-policy--mob {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .popup-feedback {
+    padding: 40px 32px;
+  }
+  .popup-feedback__btn-wrapper {
+    max-width: 230px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+  }
+  .popup-feedback__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .popup-case__top,
+  .popup-article__top {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  .popup-case__subtitle {
+    margin-bottom: 6px;
+  }
+  .popup-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .popup-subtitle {
+    font-size: 16px;
+  }
+  .popup-case__img-wrapper,
+  .popup-article__img-wrapper {
+    margin: 0 auto 24px auto;
+  }
+  .popup-case__list {
+    margin-bottom: 24px;
+  }
+  .popup-case__btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 270px;
+  }
+  .popup-article__paragraph:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  /* feedbac */
+  .popup-feedback {
+    max-width: 500px;
+  }
+  .popup-feedback__label:nth-child(3),
+  .popup-feedback__label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .popup-feedback__input {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  .popup-feedback__form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0;
+  }
+  .popup-feedback__textarea {
+    max-width: 100%;
+    width: 100%;
+    height: 160px;
+    margin-bottom: 16px;
+  }
+
+  .popup-feedback__privacy-policy--desktop {
+    display: none;
+  }
+  .popup-feedback__privacy-policy--mob {
+    display: flex;
+    margin-bottom: 16px;
+  }
+  .popup-feedback__btn-wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup__btn-close {
+    top: 10px;
+    right: 10px;
+  }
+  .popup-contact {
+    padding: 40px 32px;
+    max-width: 340px;
+  }
+  .popup-contact__btn-wrapper {
+    width: 100%;
+  }
+  .popup-contact__btn {
+    width: 100%;
+  }
+  .popup-contact__privacy-policy {
+    font-size: 10px;
+  }
 }

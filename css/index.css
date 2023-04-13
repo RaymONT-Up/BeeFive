@@ -297,6 +297,7 @@ body.body-lock {
 /* Slider Arrows */
 .slider-arrows {
   display: flex;
+  align-items: center;
   flex-direction: row;
 }
 .slider-arrow--prev,
@@ -493,6 +494,9 @@ input[type="submit"] {
   .title--3 {
     font-size: 20px;
   }
+  .title--4 {
+    font-size: 20px;
+  }
   .btn-big {
     font-size: 16px;
   }
@@ -508,6 +512,13 @@ input[type="submit"] {
     padding: 16px;
     font-size: 16px;
     line-height: 98%;
+  }
+  .link {
+    font-size: 16px;
+  }
+
+  .list-item:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
 @media (max-width: 600px) {
@@ -530,11 +541,23 @@ input[type="submit"] {
   .title--1 {
     font-size: 40px;
   }
+  .title--3 {
+    font-size: 18px;
+  }
+  .title--4 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 460px) {
   .container {
     max-width: 320px;
     padding: 0 10px;
+  }
+  .title--3 {
+    font-size: 16px;
+  }
+  .title--4 {
+    font-size: 16px;
   }
 }

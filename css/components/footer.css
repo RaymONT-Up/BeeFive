@@ -6,6 +6,7 @@
   z-index: 5;
   margin-bottom: 100px;
 }
+
 .footer__top {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 0.8fr 0.2fr;
@@ -23,6 +24,11 @@
 .footer__logo {
   display: block;
   margin-bottom: 61px;
+  max-width: 240px;
+}
+.footer__logo img {
+  width: 100%;
+  height: 100%;
 }
 .footer__paragraph {
   max-width: 263px;
@@ -114,7 +120,19 @@
 
   color: rgba(255, 255, 255, 0.5);
 }
-
+/* Mob */
+.footer__mob-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.footer__mobile {
+  display: none;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.footer__nav {
+}
 /* Decor */
 .footer__decor {
   position: absolute;
@@ -127,4 +145,103 @@
 .footer__decor--2 {
   left: -10%;
   top: -40%;
+}
+
+@media (max-width: 950px) {
+  .footer__top {
+    grid-template-columns: 1.2fr 1fr 1fr 0.4fr 0.1fr;
+    grid-gap: 15px;
+  }
+  .footer__social {
+    margin-left: 0;
+  }
+  .footer__box:nth-child(4) {
+    margin-left: 0;
+  }
+  .footer__link {
+    font-size: 16px;
+    padding: 3px 0;
+  }
+  .footer__subtitle {
+    font-size: 18px;
+  }
+  .footer__paragraph {
+    font-size: 14px;
+  }
+}
+@media (max-width: 810px) {
+  .footer__desktop {
+    display: none;
+  }
+  .footer__mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+
+    margin-right: 20px;
+  }
+  .footer__paragraph:nth-child(1) {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+  }
+  .footer__box--contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+  }
+  .footer__social {
+    flex-direction: row;
+    margin-bottom: 11px;
+  }
+  .footer__social-item {
+    margin-right: 16px;
+
+    margin-bottom: 0;
+  }
+  .footer__contact {
+    margin-bottom: 10px;
+  }
+  .footer__social-item svg {
+    width: 25px;
+    height: 25px;
+  }
+  .footer__social-item:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .footer__partner .footer__paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+  }
+  .footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__item {
+    width: auto;
+    margin: 8px 14px;
+  }
+  .footer__mob-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer__mob-cop {
+    max-width: 260px;
+    margin-right: auto;
+
+    font-family: "Actay";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
