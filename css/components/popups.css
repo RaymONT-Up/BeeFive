@@ -155,9 +155,27 @@
   color: var(--color-text-2);
   opacity: 0.4;
 }
+.popup-contact__label--budget {
+  position: relative;
+}
+.popup-contact__label--budget::after {
+  content: "KZT";
+  position: absolute;
+
+  top: 50%;
+  right: 4%;
+  transform: translate(-50%, -50%);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  color: rgba(0, 0, 0, 0.4);
+}
 .popup-contact__label-box {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -288,8 +306,33 @@
 }
 
 .popup-feedback__stars {
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 28px;
 }
+.popup-feedback__stars[data-review-total-value="1"]
+  .popup-feedback__star:nth-child(n + 5),
+.popup-feedback__stars[data-review-total-value="2"]
+  .popup-feedback__star:nth-child(n + 4),
+.popup-feedback__stars[data-review-total-value="3"]
+  .popup-feedback__star:nth-child(n + 3),
+.popup-feedback__stars[data-review-total-value="4"]
+  .popup-feedback__star:nth-child(n + 2),
+.popup-feedback__stars[data-review-total-value="5"]
+  .popup-feedback__star:nth-child(n + 1) {
+  fill: var(--color-accent-1);
+  stroke-width: 1px;
+  stroke: transparent;
+}
+.popup-feedback__star {
+  display: block;
+  margin: 0 4px 0 0;
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: var(--color-text-4);
+}
+
 .popup-feedback__stars svg {
   height: 31px;
   width: 31px;
