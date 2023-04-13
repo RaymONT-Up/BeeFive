@@ -188,6 +188,7 @@
   }
 
   .services__tab-content-item span {
+    display: block;
     font-size: 12px;
     line-height: 130%;
 

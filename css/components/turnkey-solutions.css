@@ -75,38 +75,24 @@
 }
 
 .turnkey-solutions__item-price {
-  width: fit-content;
-  position: relative;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: -1px;
   line-height: 100%;
 }
-.turnkey-solutions__item-price::after {
-  content: "";
-  position: absolute;
-  right: -25px;
-  top: 48%;
-  transform: translate(-50%, -50%);
 
-  width: 12px;
-  height: 15px;
-  background-image: url(./../../images/icons/kzt-tenge.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
 .turnkey-solutions__item-buy {
   margin-bottom: 8px;
   display: block;
   text-align: center;
   padding: 14px;
   box-sizing: border-box;
-  max-width: 226px;
+  /* max-width: 226px; */
   width: 100%;
   border-radius: var(--border-radius-card);
 }
 .turnkey-solutions__item-download {
-  max-width: 226px;
+  /* max-width: 226px; */
   width: 100%;
   border-radius: var(--border-radius-card);
 }
@@ -118,6 +104,10 @@
   margin-right: 15px;
 }
 
+.turnkey-solutions__slider-arrows .slider-pagination--fraction {
+  display: none;
+}
+/* Decor */
 .turnkey-solutions__decor {
   position: absolute;
   z-index: 0;
@@ -134,4 +124,73 @@
 .turnkey-solutions__decor--3 {
   bottom: -55%;
   right: -14%;
+}
+
+@media (max-width: 800px) {
+  .turnkey-solutions__inner {
+    margin-bottom: 96px;
+  }
+  .turnkey-solutions__item {
+    padding: 40px 20px;
+    min-height: 360px;
+  }
+  .turnkey-solutions__item-name {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  .turnkey-solutions__item-title {
+    font-family: "Actay";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110%;
+
+    color: var(--color-text-2);
+  }
+  .turnkey-solutions__item-duration {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .turnkey-solutions__item-price {
+    font-size: 14px;
+  }
+  .turnkey-solutions__item-paragraph {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .turnkey-solutions__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .turnkey-solutions__item-price {
+    margin-bottom: 0;
+  }
+  .turnkey-solutions__item-buy {
+    order: 5;
+    margin-bottom: 0;
+  }
+  .turnkey-solutions__item-download {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .turnkey-solutions__list {
+    padding: 30px 0 0 0;
+    margin-bottom: 20px;
+  }
+  .turnkey-solutions__contact-link {
+    margin-bottom: 0;
+  }
+  .turnkey-solutions__slider-arrow--prev {
+    margin-right: 0;
+  }
+  .turnkey-solutions__slider-arrows {
+    justify-content: center;
+  }
+  .turnkey-solutions__slider-arrows .slider-pagination--fraction {
+    display: flex;
+  }
 }

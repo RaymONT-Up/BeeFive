@@ -37,9 +37,8 @@ const swiper = new Swiper(".hero__slider", {
   },
 });
 
-// Services tabs
-document.addEventListener("DOMContentLoaded", e => {
-  console.log(e);
+// Services tabs || accordion for mobile
+if (window.innerWidth > 1000) {
   const servicesTabs = () => {
     const tabControlersList = document.querySelectorAll(".services__tab-btn");
     const tabContentList = document.querySelectorAll(".services__tab-content");
@@ -74,55 +73,77 @@ document.addEventListener("DOMContentLoaded", e => {
     };
   };
   servicesTabs();
-});
+} else {
+  const servicesAccordion = () => {
+    const accordions = document.querySelectorAll(".services__accordion");
+    const initOpen = document
+      .querySelector(".services__accordion--open")
+      .querySelector(".services__accordion-content");
 
-// Services accordion for mobile
-const servicesAccordion = () => {
-  const accordions = document.querySelectorAll(".services__accordion");
-  const initOpen = document
-    .querySelector(".services__accordion--open")
-    .querySelector(".services__accordion-content");
+    setTimeout(() => {
+      initOpen.style.maxHeight = `${initOpen.scrollHeight}px`;
+    }, 1000);
 
-  setTimeout(() => {
-    initOpen.style.maxHeight = `${initOpen.scrollHeight}px`;
-  }, 1000);
+    accordions.forEach(el => {
+      el.addEventListener("click", e => {
+        const self = e.currentTarget;
+        const btn = self.querySelector(".services__accordion-btn");
+        const content = self.querySelector(".services__accordion-content");
 
-  accordions.forEach(el => {
-    el.addEventListener("click", e => {
-      const self = e.currentTarget;
-      const btn = self.querySelector(".services__accordion-btn");
-      const content = self.querySelector(".services__accordion-content");
+        if (self.classList.contains("services__accordion--open")) return;
 
-      if (self.classList.contains("services__accordion--open")) return;
+        accordions.forEach(item => {
+          item.classList.remove("services__accordion--open");
+          item.querySelector(".services__accordion-content").style.maxHeight =
+            null;
+        });
 
-      accordions.forEach(item => {
-        item.classList.remove("services__accordion--open");
-        item.querySelector(".services__accordion-content").style.maxHeight =
-          null;
+        self.classList.add("services__accordion--open");
+        content.style.maxHeight = `${content.scrollHeight}px`;
       });
-
-      self.classList.add("services__accordion--open");
-      content.style.maxHeight = `${content.scrollHeight}px`;
     });
-  });
-};
-servicesAccordion();
+  };
+  servicesAccordion();
+}
 
 // Turnkey solutions slider
 const turnkeySolutionsSlider = new Swiper(".turnkey-solutions__slider", {
   slidesPerView: 4,
   spaceBetween: 20,
-
   navigation: {
     nextEl: ".turnkey-solutions__slider-arrow--next",
     prevEl: ".turnkey-solutions__slider-arrow--prev",
+  },
+
+  pagination: {
+    el: ".turnkey-solutions__slider-pagination",
+    type: "fraction",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    460: {
+      slidesPerView: 1.5,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+
+    900: {
+      slidesPerView: 3,
+    },
+
+    1200: {
+      slidesPerView: 4,
+    },
   },
 });
 
 // Cases slider
 const casesSlider = new Swiper(".cases__slider", {
   slidesPerView: 3,
-  spaceBetween: 76.5,
 
   navigation: {
     nextEl: ".cases__slider-arrow--next",
@@ -132,8 +153,49 @@ const casesSlider = new Swiper(".cases__slider", {
   pagination: {
     el: ".cases__slider-pagination",
     clickable: true,
+
     renderBullet: function (index, className) {
       return `<span class="${className}">${index + 1}</span>`;
+    },
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      pagination: {
+        el: ".cases__slider-pagination",
+        type: "fraction",
+      },
+      spaceBetween: 10,
+    },
+    460: {
+      slidesPerView: 1.3,
+      spaceBetween: 20,
+    },
+    550: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+    },
+    800: {
+      slidesPerView: 1.5,
+
+      spaceBetween: 50,
+    },
+    900: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 76,
     },
   },
 });
@@ -142,6 +204,7 @@ const casesSlider = new Swiper(".cases__slider", {
 const reviewsSlider = new Swiper(".reviews__slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
+  centeredSlides: true,
   navigation: {
     nextEl: ".reviews__slider-arrow--next",
     prevEl: ".reviews__slider-arrow--prev",
