@@ -497,6 +497,9 @@ input[type="submit"] {
   .title--1 {
     font-size: 60px;
   }
+  .title--2 {
+    font-size: 40px;
+  }
   .title--3 {
     font-size: 20px;
   }
@@ -547,6 +550,11 @@ input[type="submit"] {
   .title--1 {
     font-size: 40px;
   }
+
+  .title--2 {
+    font-size: 34px;
+  }
+
   .title--3 {
     font-size: 18px;
   }
@@ -567,6 +575,10 @@ input[type="submit"] {
   .container {
     max-width: 320px;
     padding: 0 10px;
+  }
+
+  .title--2 {
+    font-size: 26px;
   }
   .title--3 {
     font-size: 16px;

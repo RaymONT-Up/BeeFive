@@ -333,6 +333,10 @@
   }
 }
 @media (max-width: 615px) {
+  .about-company__inner {
+    margin-bottom: 48px;
+  }
+
   .about-company__team,
   .about-company__clients,
   .about-company__where {
