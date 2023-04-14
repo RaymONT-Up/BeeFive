@@ -3,6 +3,7 @@
   position: relative;
   z-index: 5;
 }
+
 .about-company__title {
   margin-bottom: 56px;
 }
@@ -299,6 +300,8 @@
   }
 }
 @media (max-width: 1000px) {
+  /* Tabs */
+
   .about-company__tabs {
     display: grid;
   }

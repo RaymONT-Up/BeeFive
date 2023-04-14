@@ -237,7 +237,6 @@ if (window.innerWidth < 1000) {
 
       tabName = e.target.getAttribute("company-tab-index");
       tabContentChange(tabName);
-      console.log("test2");
     });
   });
 
@@ -262,10 +261,12 @@ const articlesSlider = new Swiper(".articles__slider", {
   pagination: {
     el: ".articles__slider-pagination",
     clickable: true,
-    renderBullet: function (index, className) {
+    renderBullet: function (index, className, a) {
+      console.log(index, className, a);
       return `<span class="${className}">${index + 1}</span>`;
     },
     // renderCustom: function (swiper, current, total) {
+    //   console.log(swiper, current, total);
     //   let paginationHtml = "";
     //   const maxVisible = 3; // максимальное количество видимых элементов
 
@@ -305,7 +306,6 @@ const articlesSlider = new Swiper(".articles__slider", {
     //   // добавляем последний элемент
     //   paginationHtml +=
     //     '<span class="swiper-pagination-bullet">' + total + "</span>";
-
     //   return paginationHtml;
     // },
   },
