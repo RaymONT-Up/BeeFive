@@ -236,6 +236,7 @@ if (window.innerWidth < 1000) {
       e.target.classList.add("about-company__tab--active");
 
       tabName = e.target.getAttribute("company-tab-index");
+
       tabContentChange(tabName);
     });
   });
@@ -246,6 +247,14 @@ if (window.innerWidth < 1000) {
     });
 
     tabContentList[+tabName - 1].classList.add("about-company__tab--active");
+    if (+tabName === 2) {
+      document
+        .querySelector(".advantages")
+        .classList.add("about-company__tab--active");
+      document
+        .querySelector(".work-process")
+        .classList.add("about-company__tab--active");
+    }
   };
 }
 // ARTICLES SLDIER

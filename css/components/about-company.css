@@ -3,6 +3,13 @@
   position: relative;
   z-index: 5;
 }
+.work-process.about-company__tab-content,
+.advantages.about-company__tab-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
 
 .about-company__title {
   margin-bottom: 56px;
@@ -319,6 +326,17 @@
   .about-company__tab-btn {
   }
 
+  .about-company__box.about-company__tab-content.about-company__tab--active,
+  .work-process.about-company__tab-content.about-company__tab--active,
+  .advantages.about-company__tab-content.about-company__tab--active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .work-process.about-company__tab-content,
+  .advantages.about-company__tab-content,
   .about-company__box.about-company__tab-content {
     display: none;
     opacity: 0;
@@ -326,13 +344,6 @@
     transform: scale(0);
 
     transition: all, 0.5s;
-  }
-
-  .about-company__box.about-company__tab-content.about-company__tab--active {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
   }
 }
 @media (max-width: 615px) {
