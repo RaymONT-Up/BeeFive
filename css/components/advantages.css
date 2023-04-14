@@ -121,8 +121,31 @@
     margin: 0 auto 30px auto;
     width: fit-content;
   }
+
   .advantages__list {
     max-width: 500px;
+  }
+
+  /* AOS */
+  .advantages__item-wrapper:nth-child(1) .advantages__item.aos-init {
+    transform: translateX(-100%);
+  }
+  .advantages__item-wrapper:nth-child(1) .advantages__item.aos-animate {
+    transform: translateX(0);
+  }
+
+  .advantages__item-wrapper:nth-child(2) .advantages__item.aos-init {
+    transform: translateX(100%);
+  }
+  .advantages__item-wrapper:nth-child(2) .advantages__item.aos-animate {
+    transform: translateX(0);
+  }
+
+  .advantages__item-wrapper:nth-child(3) .advantages__item.aos-init {
+    transform: translateX(-100%);
+  }
+  .advantages__item-wrapper:nth-child(3) .advantages__item.aos-animate {
+    transform: translateX(0);
   }
 }
 @media (max-width: 460px) {

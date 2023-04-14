@@ -12,9 +12,9 @@
   font-weight: 400;
   src: url(./../fonts/actay-regular.ttf);
 }
-.lower-case-name {
-  text-transform: lowercase;
-}
+
+/* Aos(необходимо дабы можно было использовать задержку больше стандартных 3с */
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,6 +31,9 @@ body {
 
   color: var(--color-text-1);
   background-color: var(--color-body-bg);
+}
+.lower-case-name {
+  text-transform: lowercase;
 }
 .wrapper {
   overflow: hidden;

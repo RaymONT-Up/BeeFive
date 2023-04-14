@@ -151,4 +151,12 @@
   .work-process__item-paragraph {
     font-size: 14px;
   }
+
+  .work-process__title {
+    margin-right: 20%;
+    text-align: center;
+  }
+  .work-process__title--accent {
+    margin-left: 60%;
+  }
 }
