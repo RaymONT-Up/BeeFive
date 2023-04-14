@@ -410,7 +410,7 @@
   }
   .about-company__team-item:nth-child(4) {
     transform: translate(0);
-    grid-area: 3 / 1 / 4 / 11;
+    grid-area: 3 / 1 / 4 / 12;
   }
   .about-company__team-item:nth-child(5) {
     grid-area: 4 / 1 / 5 / 9;
@@ -421,7 +421,7 @@
     transform: translateY(0%);
   }
   .about-company__team-item:nth-child(7) {
-    grid-area: 6 / 7 / 6 / 13;
+    grid-area: 6 / 5 / 6 / 13;
     transform: translate(0);
   }
   .about-company__team-item:nth-child(8) {

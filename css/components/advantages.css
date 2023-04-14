@@ -113,6 +113,10 @@
   }
 }
 @media (max-width: 800px) {
+  .advantages__inner {
+    margin-bottom: 60px;
+  }
+
   .advantages__title {
     margin: 0 auto 30px auto;
     width: fit-content;
@@ -122,6 +126,10 @@
   }
 }
 @media (max-width: 460px) {
+  .advantages__inner {
+    margin-bottom: 48px;
+  }
+
   .advantages__title {
     margin-bottom: 24px;
   }

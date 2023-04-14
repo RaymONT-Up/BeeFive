@@ -228,8 +228,6 @@ if (window.innerWidth < 1000) {
     ".about-company__tab-content.about-company__tab--active"
   );
 
-  // initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
-
   tabControlersList.forEach(item => {
     item.addEventListener("click", e => {
       tabControlersList.forEach(i => {
