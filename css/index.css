@@ -485,7 +485,18 @@ input[type="submit"] {
   cursor: pointer;
   border: none;
 }
-
+/* Decor */
+.decor-item {
+  position: absolute;
+  z-index: -1;
+  user-select: none;
+}
+.decor-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 /* Media */
 @media (max-width: 1300px) {
   .btn-big {
@@ -530,6 +541,7 @@ input[type="submit"] {
     margin-bottom: 8px;
   }
 }
+
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -547,6 +559,11 @@ input[type="submit"] {
     height: 14px;
     background-size: 100% 100%;
   }
+
+  .btn-accent {
+    border-radius: 6px;
+  }
+
   .title--1 {
     font-size: 40px;
   }

@@ -197,6 +197,11 @@
   }
 }
 @media (max-width: 600px) {
+  .services__decor--1 {
+    max-width: 500px;
+    bottom: -1%;
+    right: -29%;
+  }
   .services__accordion-btn {
     font-size: 16px;
     line-height: 110%;

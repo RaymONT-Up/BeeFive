@@ -284,4 +284,12 @@
   .footer__link {
     font-size: 14px;
   }
+  .footer__decor--1 {
+    max-width: 410px;
+    left: -87%;
+    top: -16%;
+  }
+  .footer__decor--2 {
+    display: none;
+  }
 }

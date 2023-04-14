@@ -128,6 +128,11 @@
   .decision-contact__title--mob {
     font-size: 30px;
   }
+  .decision-contact__decor--1 {
+    left: -48%;
+    max-width: 250px;
+    top: -27%;
+  }
 }
 @media (max-width: 460px) {
   .decision-contact__inner {

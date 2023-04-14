@@ -144,6 +144,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 110%;
+    text-transform: none;
 
     color: var(--color-text-2);
   }
@@ -185,6 +186,8 @@
   }
   .turnkey-solutions__contact-link {
     margin-bottom: 0;
+    transform: rotate(2deg);
+    margin-left: 0;
   }
   .turnkey-solutions__slider-arrow--prev {
     margin-right: 0;
@@ -194,5 +197,20 @@
   }
   .turnkey-solutions__slider-arrows .slider-pagination--fraction {
     display: flex;
+  }
+
+  .turnkey-solutions__decor--1 {
+    top: 29%;
+    left: -71%;
+  }
+  .turnkey-solutions__decor--2 {
+    bottom: 76%;
+    max-width: 300px;
+    left: -6%;
+  }
+  .turnkey-solutions__decor--3 {
+    max-width: 300px;
+    bottom: -11%;
+    right: -44%;
   }
 }

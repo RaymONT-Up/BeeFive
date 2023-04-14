@@ -124,3 +124,19 @@
     text-align: center;
   }
 }
+
+@media (max-width: 500px) {
+  .cases__decor--1 {
+    max-width: 200px;
+    top: 80%;
+    right: -29%;
+  }
+  .cases__decor--2 {
+    top: -41%;
+    max-width: 600px;
+    left: -100%;
+  }
+  .cases__decor--3 {
+    display: none;
+  }
+}

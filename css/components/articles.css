@@ -117,4 +117,19 @@
     margin-left: 0;
     font-size: 14px;
   }
+
+  /*  decor */
+  .articles__decor--1 {
+    top: 17%;
+    max-width: 200px;
+    left: -10%;
+  }
+  .articles__decor--2 {
+    top: 32%;
+    max-width: 300px;
+    right: -63%;
+  }
+  .articles__decor--3 {
+    display: none;
+  }
 }

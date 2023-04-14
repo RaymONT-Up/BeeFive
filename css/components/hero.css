@@ -81,10 +81,7 @@
   display: none;
 }
 /* Decor */
-.hero__decor {
-  position: absolute;
-  z-index: 0;
-}
+
 .hero__decor--1 {
   top: 18%;
   right: 3%;
@@ -150,6 +147,23 @@
     line-height: 130%;
 
     text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .hero__decor--1 {
+    top: -2%;
+    right: -10%;
+    max-width: 350px;
+  }
+  .hero__decor--2 {
+    top: -120%;
+    max-width: 504px;
+    left: -50%;
+  }
+  .hero__decor--3 {
+    bottom: -63%;
+    left: -18%;
+    max-width: 422px;
   }
 }
 @media (max-width: 500px) {

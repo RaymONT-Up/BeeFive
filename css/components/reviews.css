@@ -186,6 +186,9 @@
   }
 }
 @media (max-width: 600px) {
+  .reviews__inner {
+    margin-bottom: 96px;
+  }
   .reviews__slider-container {
     margin-top: 30px;
   }
@@ -223,9 +226,40 @@
   .reviews__item-name {
     margin-bottom: 4px;
   }
+
+  .reviews__item-position {
+    margin-bottom: 3px;
+  }
   .reviews__item-name,
   .reviews__item-position,
   .reviews__item-company {
     font-size: 14px;
+  }
+
+  /* DEC */
+  .reviews__decor--1 {
+    max-width: 445px;
+    top: -19%;
+    left: -47%;
+  }
+  .reviews__decor--2 {
+    max-width: 200px;
+    bottom: -7%;
+    left: -4%;
+  }
+  .reviews__decor--3 {
+    bottom: -29%;
+    max-width: 300px;
+    right: -18%;
+  }
+}
+
+@media (max-width: 460px) {
+  .reviews__btn {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    transform: rotate(2deg);
   }
 }

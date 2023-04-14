@@ -101,6 +101,21 @@
     font-size: 14px;
     max-width: 270px;
   }
+
+  /* Decor */
+  .individual-solution__decor--1 {
+    top: -42%;
+    left: -67%;
+  }
+  .individual-solution__decor--2 {
+    bottom: -40%;
+    right: -75%;
+  }
+  .individual-solution__decor--3 {
+    bottom: -17%;
+    max-width: 200px;
+    left: -25%;
+  }
 }
 @media (max-width: 460px) {
   .individual-solution__text {

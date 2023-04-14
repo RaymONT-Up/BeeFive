@@ -121,7 +121,7 @@ const turnkeySolutionsSlider = new Swiper(".turnkey-solutions__slider", {
     0: {
       slidesPerView: 1,
     },
-    460: {
+    461: {
       slidesPerView: 1.5,
     },
     600: {
