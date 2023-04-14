@@ -42,9 +42,9 @@
   border-radius: 100%;
   background-color: var(--color-accent-1);
 
-  transition: all, 0.5s;
+  transition: all, 1s;
   transform: translateX(0);
-  transition-delay: 3s;
+  transition-delay: 4s;
 }
 .decision-contact__toggle.aos-animate .decision-contact__toggle-icon {
   transform: translateX(110%);

@@ -248,8 +248,7 @@ if (window.innerWidth < 1000) {
     tabContentList[+tabName - 1].classList.add("about-company__tab--active");
   };
 }
-
-// Articles Slider
+// ARTICLES SLDIER
 const articlesSlider = new Swiper(".articles__slider", {
   slidesPerView: 3,
   spaceBetween: 20,
@@ -260,54 +259,27 @@ const articlesSlider = new Swiper(".articles__slider", {
   },
   pagination: {
     el: ".articles__slider-pagination",
-    clickable: true,
-    renderBullet: function (index, className, a) {
-      console.log(index, className, a);
-      return `<span class="${className}">${index + 1}</span>`;
+    type: "custom",
+    renderCustom: function (swiper, current, total) {
+      var bullets = [];
+      if (current === 1) {
+        bullets = [1, "...", Math.floor(total / 2), "...", total];
+      } else if (current === total) {
+        bullets = [1, "...", Math.floor(total / 2), "...", total];
+      } else if (current > 1 && current < total) {
+        bullets = [1, "...", current, "...", total];
+      }
+      var html = "";
+      bullets.forEach(function (bullet) {
+        html +=
+          '<span class="swiper-pagination-bullet articles__pagination-item';
+        if (current === bullet) {
+          html += " swiper-pagination-bullet-active";
+        }
+        html += '" data-index="' + bullet + '">' + bullet + "</span>";
+      });
+      return html;
     },
-    // renderCustom: function (swiper, current, total) {
-    //   console.log(swiper, current, total);
-    //   let paginationHtml = "";
-    //   const maxVisible = 3; // максимальное количество видимых элементов
-
-    //   // добавляем первый элемент
-    //   paginationHtml +=
-    //     '<span class="swiper-pagination-bullet">' + 1 + "</span>";
-
-    //   // добавляем обрезанные числа, если их нужно показать
-    //   if (total > maxVisible) {
-    //     const start = current - 1;
-    //     const end = current + 1;
-    //     if (current < 2) {
-    //       end += 2 - current;
-    //     } else if (current > total - 2) {
-    //       start -= current - (total - 3);
-    //     }
-    //     if (start > 1) {
-    //       paginationHtml += '<span class="swiper-pagination-bullet">..</span>';
-    //     }
-    //     for (let i = start; i <= end; i++) {
-    //       if (i > 1 && i < total) {
-    //         paginationHtml +=
-    //           '<span class="swiper-pagination-bullet">' + i + "</span>";
-    //       }
-    //     }
-    //     if (end < total) {
-    //       paginationHtml += '<span class="swiper-pagination-bullet">..</span>';
-    //     }
-    //   } else {
-    //     // добавляем остальные элементы
-    //     for (let i = 2; i <= total - 1; i++) {
-    //       paginationHtml +=
-    //         '<span class="swiper-pagination-bullet">' + i + "</span>";
-    //     }
-    //   }
-
-    //   // добавляем последний элемент
-    //   paginationHtml +=
-    //     '<span class="swiper-pagination-bullet">' + total + "</span>";
-    //   return paginationHtml;
-    // },
   },
 
   breakpoints: {

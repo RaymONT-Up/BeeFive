@@ -5,9 +5,12 @@
   grid-template-columns: repeat(50, 1fr);
   /* grid-template-rows: repeat(40, 1fr); */
 
-  margin-bottom: 124px;
+  margin-bottom: 200px;
 }
 
+.gallery__item {
+  transition: all, 1.2s;
+}
 .gallery__item:nth-child(1) {
   grid-area: 1 / 1 / 17 / 18;
 }

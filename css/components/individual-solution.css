@@ -2,7 +2,7 @@
   position: relative;
   z-index: 5;
   padding: 64px 110px 60px 110px;
-  margin-bottom: 142px;
+  margin-bottom: 100px;
   border-radius: var(--border-radius-1);
   border: 2px solid var(--color-accent-1);
 
