@@ -158,6 +158,9 @@
 .popup-contact__label--budget {
   position: relative;
 }
+.popup-contact__label--budget .popup-contact__input {
+  padding-right: 26%;
+}
 .popup-contact__label--budget::after {
   content: "KZT";
   position: absolute;

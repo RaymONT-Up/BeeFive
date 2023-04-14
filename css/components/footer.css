@@ -52,6 +52,11 @@
   display: block;
   box-sizing: border-box;
   padding: 5px 5px 5px 0;
+
+  opacity: 0.8;
+}
+.footer__link:hover {
+  opacity: 1;
 }
 .footer__link--confidentiality {
   margin-top: auto;
