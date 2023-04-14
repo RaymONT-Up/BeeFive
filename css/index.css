@@ -255,6 +255,8 @@ body.body-lock {
   height: 20px;
   background-image: url(./../images/icons/check.svg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .list-check__item:not(:last-child) {
   margin-bottom: 20px;
@@ -550,6 +552,14 @@ input[type="submit"] {
   }
   .title--4 {
     font-size: 18px;
+  }
+
+  .list-check__item {
+    padding-left: 20px;
+  }
+  .list-check__item::after {
+    width: 14px;
+    height: 14px;
   }
 }
 

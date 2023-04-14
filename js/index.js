@@ -216,41 +216,41 @@ const reviewsSlider = new Swiper(".reviews__slider", {
 });
 
 // About company tabs
-// if (window.innerWidth > 1000) {
-//   const tabControlersList = document.querySelectorAll(".about-company__tab");
-//   const tabContentList = document.querySelectorAll(
-//     ".about-company__tab-content"
-//   );
-//   let tabName;
-//   const initTab = document.querySelector(
-//     ".about-company__tab-content.about-company__tab--active"
-//   );
+if (window.innerWidth < 1000) {
+  const tabControlersList = document.querySelectorAll(
+    ".about-company__tab-btn"
+  );
+  const tabContentList = document.querySelectorAll(
+    ".about-company__tab-content"
+  );
+  let tabName;
+  const initTab = document.querySelector(
+    ".about-company__tab-content.about-company__tab--active"
+  );
 
-//   // initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
+  // initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
 
-//   tabControlersList.forEach(item => {
-//     item.addEventListener("click", e => {
-//       tabControlersList.forEach(i => {
-//         i.classList.remove("about-company__tab--active");
-//       });
-//       e.target.classList.add("about-company__tab--active");
+  tabControlersList.forEach(item => {
+    item.addEventListener("click", e => {
+      tabControlersList.forEach(i => {
+        i.classList.remove("about-company__tab--active");
+      });
+      e.target.classList.add("about-company__tab--active");
 
-//       tabName = e.target.getAttribute("company-tab-index");
-//       tabContentChange(tabName);
-//     });
-//   });
+      tabName = e.target.getAttribute("company-tab-index");
+      tabContentChange(tabName);
+      console.log("test2");
+    });
+  });
 
-//   const tabContentChange = tabName => {
-//     tabContentList.forEach(i => {
-//       i.classList.remove("about-company__tab--active");
-//       i.style.maxHeight = `0px`;
-//     });
-//     tabContentList[+tabName - 1].classList.add("about-company__tab--active");
-//     tabContentList[+tabName - 1].style.maxHeight = `${
-//       tabContentList[+tabName - 1].scrollHeight
-//     }px`;
-//   };
-// }
+  const tabContentChange = tabName => {
+    tabContentList.forEach(i => {
+      i.classList.remove("about-company__tab--active");
+    });
+
+    tabContentList[+tabName - 1].classList.add("about-company__tab--active");
+  };
+}
 
 // Articles Slider
 const articlesSlider = new Swiper(".articles__slider", {

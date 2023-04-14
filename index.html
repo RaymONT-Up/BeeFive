@@ -1567,25 +1567,40 @@
         <section class="about-company" id="about-company">
           <div class="container">
             <div class="about-company__inner">
-              <h3 class="about-company__title title--1">О КОМПАНИИ</h3>
-              <!-- <div class="about-company__tabs">
-                <button class="about-company__tab" company-tab-index="1">
+              <h3 class="about-company__title title--1">
+                О
+                <span>КОМПАНИИ</span>
+                <span class="lower-case-name">beefive</span>
+              </h3>
+              <span class="about-company__subtitle-accent btn-accent">
+                Нажмите на Как мы работаем, чтобы узнать больше
+              </span>
+              <div class="about-company__tabs">
+                <button
+                  class="about-company__tab-btn about-company__tab--active btn-big"
+                  company-tab-index="1"
+                >
                   Наша команда
                 </button>
-                <button class="about-company__tab" company-tab-index="2">
+                <button
+                  class="about-company__tab-btn btn-big"
+                  company-tab-index="2"
+                >
                   Как мы работаем
                 </button>
-              </div> -->
+              </div>
               <div class="about-company__wrapper">
                 <div
-                  class="about-company__team card about-company__tab-content about-company__tab-content--active"
+                  class="about-company__team card about-company__tab-content about-company__tab--active"
                   company-tab-index="1"
                 >
                   <h5
                     class="about-company__team-subtitle about-company__subtitle"
                   >
-                    НАША КОМАНДА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА С БОЛЬШИМ ОПЫТОМ
-                    РАБОТЫ В ОБЛАСТИ:
+                    НАША КОМАНДА
+                    <span class="about-company__team-subtitle--desktop">—</span>
+                    <span class="about-company__team-subtitle--mob">-</span>
+                    ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА С БОЛЬШИМ ОПЫТОМ РАБОТЫ В ОБЛАСТИ:
                   </h5>
                   <ul class="about-company__team-list">
                     <li class="about-company__team-item">
@@ -1619,6 +1634,14 @@
                     </li>
                   </ul>
                   <div class="about-company__founder">
+                    <p
+                      class="about-company__founder-name about-company__founder-name--mob about-company__subtitle"
+                    >
+                      БАТИМА ДОНОВА:
+                      <br />
+                      Основатель
+                      <span class="lower-case-name">BeeFive</span>
+                    </p>
                     <div class="about-company__founder-img-wrapper">
                       <img
                         class="about-company__founder-img"
@@ -1649,7 +1672,7 @@
                   </div>
                 </div>
                 <div
-                  class="about-company__box about-company__tab-content"
+                  class="about-company__box about-company__tab-content about-company__tab-content"
                   company-tab-index="2"
                 >
                   <div class="about-company__clients card">
