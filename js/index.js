@@ -2,6 +2,13 @@
 Fancybox.bind('[data-fancybox="gallery"]', {});
 Fancybox.bind("[data-fancybox='reviews-gallery']", {});
 
+// AOS
+AOS.init({
+  delay: 250, // values from 0 to 3000, with step 50ms
+  duration: 1250, // values from 0 to 3000, with step 50ms
+  once: true, // whether animation should happen only once - while scrolling down
+});
+
 // Header dropdown
 const headerDropdownBtn = document.querySelector(".header__dropdown-btn");
 const headerDropdownList = document.querySelector(".header__list");
@@ -254,6 +261,19 @@ if (window.innerWidth < 1000) {
       document
         .querySelector(".work-process")
         .classList.add("about-company__tab--active");
+
+      // Для того чтобы анимация работала удаляю класс анимации, который появлся сразу из-за того что элементы были скрыты с помощью dispay none
+      const advantagesItems = document.querySelectorAll(".advantages__item");
+      advantagesItems.forEach(i => {
+        i.classList.remove("aos-animate");
+      });
+
+      const workProcessItems = document.querySelectorAll(".work-process__item");
+      workProcessItems.forEach(i => {
+        i.classList.remove("aos-animate");
+      });
+
+      AOS.refresh();
     }
   };
 }

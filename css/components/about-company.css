@@ -1,3 +1,7 @@
+.about-company {
+  position: relative;
+  z-index: 6;
+}
 .about-company__inner {
   margin-bottom: 90px;
   position: relative;
@@ -224,8 +228,13 @@
 .about-company__tab-btn.about-company__tab--active {
   color: var(--color-text-1);
 
+  animation-name: tabActive;
+  animation-delay: 0;
+  animation-duration: 1s;
+
   background-color: var(--color-accent-1);
 }
+
 .about-company__tab-content {
   display: none;
   opacity: 0;
@@ -236,6 +245,10 @@
 }
 .about-company__tab-content.about-company__tab--active {
   display: block;
+  animation-name: tabActive;
+  animation-delay: 0;
+  animation-duration: 1s;
+
   opacity: 1;
   visibility: visible;
   transform: scale(1);
@@ -245,6 +258,16 @@
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+@keyframes tabActive {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Decor */

@@ -1,3 +1,7 @@
+.advantages {
+  position: relative;
+  z-index: 5;
+}
 .advantages__inner {
   position: relative;
   z-index: 5;
