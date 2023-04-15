@@ -246,7 +246,7 @@
 .about-company__tab-content.about-company__tab--active {
   display: block;
   animation-name: tabActive;
-  animation-delay: 0;
+  animation-delay: 0s;
   animation-duration: 1s;
 
   opacity: 1;
@@ -269,7 +269,16 @@
     transform: scale(1);
   }
 }
-
+@keyframes tabInactive {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
 /* Decor */
 .about-company__decor {
   position: absolute;
@@ -367,6 +376,11 @@
     transform: scale(0);
 
     transition: all, 0.5s;
+  }
+
+  /* decor */
+  .about-company__decor--2 {
+    top: 71%;
   }
 }
 @media (max-width: 615px) {

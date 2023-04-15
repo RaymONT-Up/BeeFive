@@ -2,13 +2,6 @@
 Fancybox.bind('[data-fancybox="gallery"]', {});
 Fancybox.bind("[data-fancybox='reviews-gallery']", {});
 
-// AOS
-AOS.init({
-  delay: 250, // values from 0 to 3000, with step 50ms
-  duration: 1250, // values from 0 to 3000, with step 50ms
-  once: true, // whether animation should happen only once - while scrolling down
-});
-
 // Header dropdown
 const headerDropdownBtn = document.querySelector(".header__dropdown-btn");
 const headerDropdownList = document.querySelector(".header__list");
@@ -286,27 +279,32 @@ const articlesSlider = new Swiper(".articles__slider", {
     nextEl: ".articles__slider-arrow--next",
     prevEl: ".articles__slider-arrow--prev",
   },
+
   pagination: {
     el: ".articles__slider-pagination",
     type: "custom",
+
     renderCustom: function (swiper, current, total) {
-      var bullets = [];
+      let bullets = [];
+
       if (current === 1) {
-        bullets = [1, "...", Math.floor(total / 2), "...", total];
+        bullets = [1, Math.floor(total / 2), total];
       } else if (current === total) {
-        bullets = [1, "...", Math.floor(total / 2), "...", total];
+        bullets = [1, Math.floor(total / 2), total];
       } else if (current > 1 && current < total) {
-        bullets = [1, "...", current, "...", total];
+        bullets = [1, current, total];
       }
-      var html = "";
-      bullets.forEach(function (bullet) {
+      let html = "";
+      bullets.forEach((bullet, index, array) => {
         html +=
-          '<span class="swiper-pagination-bullet articles__pagination-item';
+          '<span class="swiper-pagination-bullet articles__pagination-item articles__pagination-item--num';
         if (current === bullet) {
           html += " swiper-pagination-bullet-active";
         }
+
         html += '" data-index="' + bullet + '">' + bullet + "</span>";
       });
+      ``;
       return html;
     },
   },
@@ -337,6 +335,22 @@ const articlesSlider = new Swiper(".articles__slider", {
     },
   },
 });
+
+const bullets = document.querySelectorAll(".articles__pagination-item--num");
+const bulletsContainer = document.querySelector(".articles__slider-pagination");
+
+bulletsContainer.addEventListener("click", onBulletClick);
+function onBulletClick(event) {
+  if (event.target.classList.contains("articles__pagination-item--num")) {
+    const slideIndex = parseInt(event.target.dataset.index, 10);
+
+    // вызываем метод slideTo для переключения на нужный слайд
+    articlesSlider.slideTo(slideIndex - 1);
+
+    // обновляем состояние активного слайда
+    articlesSlider.updateActiveIndex(slideIndex - 1);
+  }
+}
 
 // Rating stars
 const ratingItemsList = document.querySelectorAll(".popup-feedback__star");
