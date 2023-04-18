@@ -1,15 +1,25 @@
+.gallery {
+  position: relative;
+}
+.gallery__parallax-wrapper {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+}
 .gallery__inner {
   position: relative;
+
   z-index: 5;
   display: grid;
   grid-template-columns: repeat(50, 1fr);
   /* grid-template-rows: repeat(40, 1fr); */
 
-  margin-bottom: 200px;
+  margin-bottom: 250px;
 }
 
 .gallery__item {
   transition: all, 0.5s;
+  will-change: transform;
 }
 .gallery__item:nth-child(1) {
   grid-area: 1 / 1 / 17 / 18;

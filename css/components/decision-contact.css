@@ -109,21 +109,21 @@
     width: 3em;
   }
   .decision-contact__toggle-icon {
-    left: auto;
+    left: 5%;
 
-    right: 10%;
+    right: auto;
 
     width: 0.9em;
     height: 0.9em;
     border-width: 1px;
-    transform: translateX(-10%);
+    transform: translateX(10%);
 
     transition-property: transform;
     transition-delay: 3.5s;
     transition-duration: 2s;
   }
   .decision-contact__toggle.aos-animate .decision-contact__toggle-icon {
-    transform: translateX(-180%);
+    transform: translateX(185%);
   }
 }
 @media (max-width: 600px) {

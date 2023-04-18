@@ -113,7 +113,13 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+  .articles__title--accent {
+    margin-left: 0.6em;
+  }
+}
+
+@media (max-width: 900px) {
   .articles__inner {
     margin-bottom: 96px;
   }

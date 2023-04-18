@@ -2,7 +2,7 @@
   position: relative;
   z-index: 5;
   padding: 64px 110px 60px 110px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   border-radius: var(--border-radius-1);
   border: 2px solid var(--color-accent-1);
 
@@ -75,6 +75,7 @@
 @media (max-width: 1140px) {
   .individual-solution__inner {
     padding: 40px 60px;
+    margin-bottom: 50px;
   }
   .individual-solution__title {
     font-size: 30px;
