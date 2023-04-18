@@ -23,7 +23,7 @@
 }
 .gallery__item-image {
   display: block;
-  transition: all, 0.5s;
+  transition: all, 0.7s;
   will-change: transform;
 }
 .gallery__item:nth-child(1) {

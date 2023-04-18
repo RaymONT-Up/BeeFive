@@ -2,7 +2,7 @@ const parallaxContainer = document.querySelector(".gallery");
 const parallaxItems = document.querySelectorAll(".gallery__item");
 const parallaxItemsImage = document.querySelectorAll(".gallery__item-image");
 
-// // Кф - чем меньше тем больше будет паралакс
+// Кф - чем меньше тем больше будет паралакс
 // const coefficient = 20;
 // const speed = 0.1;
 
@@ -18,7 +18,7 @@ const parallaxItemsImage = document.querySelectorAll(".gallery__item-image");
 //   posX = posX + distX * speed;
 //   posY = posY + distY * speed;
 
-//   parallaxItems.forEach(item => {
+//   parallaxItemsImage.forEach(item => {
 //     item.style.cssText = `transform: translate(${posX / coefficient}%, ${
 //       posY / coefficient
 //     }%)`;
