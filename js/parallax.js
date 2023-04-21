@@ -40,41 +40,88 @@ const parallaxItemsImage = document.querySelectorAll(".gallery__item-image");
 // });
 
 // // Паралакс при скроле
-let thresholdSets = [];
-for (let i = 0; i <= 1.0; i += 0.005) {
-  thresholdSets.push(i);
+if (document.documentElement.clientWidth > 768) {
+  let thresholdSets = [];
+  for (let i = 0; i <= 1.0; i += 0.005) {
+    thresholdSets.push(i);
+  }
+  const callback = (entries, observer) => {
+    const scrollTopProcent =
+      (window.pageYOffset / parallaxContainer.offsetHeight) * 100;
+    setParallaxItemsStyle(scrollTopProcent);
+  };
+  
+  
+  const setParallaxItemsStyle = scrollTopProcent => {
+    parallaxItemsImage[0].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 30
+    }%)`;
+    parallaxItemsImage[1].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 14
+    }%)`;
+    parallaxItemsImage[2].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 30
+    }%)`;
+    parallaxItemsImage[3].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 18
+    }%)`;
+    parallaxItemsImage[4].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 30
+    }%)`;
+    parallaxItemsImage[5].style.cssText = `transform: translate(0,${
+      scrollTopProcent / 40
+    }%)`;
+    parallaxItemsImage[6].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 25
+    }%)`;
+  };
+  
+  const observer = new IntersectionObserver(callback, {
+    threshold: thresholdSets,
+  });
+  observer.observe(document.querySelector(".gallery"));
+  
 }
-const callback = (entries, observer) => {
-  const scrollTopProcent =
-    (window.pageYOffset / parallaxContainer.offsetHeight) * 100;
-  setParallaxItemsStyle(scrollTopProcent);
-};
 
-const setParallaxItemsStyle = scrollTopProcent => {
-  parallaxItemsImage[0].style.cssText = `transform: translate(0, ${
-    scrollTopProcent / 30
-  }%)`;
-  parallaxItemsImage[1].style.cssText = `transform: translate(0, ${
-    scrollTopProcent / 14
-  }%)`;
-  parallaxItemsImage[2].style.cssText = `transform: translate(0, ${
-    scrollTopProcent / 30
-  }%)`;
-  parallaxItemsImage[3].style.cssText = `transform: translate(0, ${
-    scrollTopProcent / 18
-  }%)`;
-  parallaxItemsImage[4].style.cssText = `transform: translate(0, ${
-    scrollTopProcent / 30
-  }%)`;
-  parallaxItemsImage[5].style.cssText = `transform: translate(0,${
-    scrollTopProcent / 40
-  }%)`;
-  parallaxItemsImage[6].style.cssText = `transform: translate(0, ${
-    scrollTopProcent / 25
-  }%)`;
-};
-
-const observer = new IntersectionObserver(callback, {
-  threshold: thresholdSets,
-});
-observer.observe(document.querySelector(".gallery"));
+if (document.documentElement.clientWidth <= 768) {
+  let thresholdSets = [];
+  for (let i = 0; i <= 1.0; i += 0.005) {
+    thresholdSets.push(i);
+  }
+  const callback = (entries, observer) => {
+    const scrollTopProcent =
+      (window.pageYOffset / parallaxContainer.offsetHeight) * 100;
+    setParallaxItemsStyle(scrollTopProcent);
+  };
+  
+  
+  const setParallaxItemsStyle = scrollTopProcent => {
+    parallaxItemsImage[0].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 60
+    }%)`;
+    parallaxItemsImage[1].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 40
+    }%)`;
+    parallaxItemsImage[2].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 40
+    }%)`;
+    parallaxItemsImage[3].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 36
+    }%)`;
+    parallaxItemsImage[4].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 60
+    }%)`;
+    parallaxItemsImage[5].style.cssText = `transform: translate(0,${
+      scrollTopProcent / 80
+    }%)`;
+    parallaxItemsImage[6].style.cssText = `transform: translate(0, ${
+      scrollTopProcent / 30
+    }%)`;
+  };
+  
+  const observer = new IntersectionObserver(callback, {
+    threshold: thresholdSets,
+  });
+  observer.observe(document.querySelector(".gallery"));
+  
+}

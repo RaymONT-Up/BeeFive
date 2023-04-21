@@ -24,11 +24,23 @@
 }
 
 .turnkey-solutions__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
   padding: 49px 32px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   min-height: 540px;
 }
 .turnkey-solutions__item-name {
@@ -86,19 +98,29 @@
   display: block;
   text-align: center;
   padding: 14px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 226px;
   width: 100%;
-  border-radius: var(--border-radius-card);
+  -webkit-border-radius: var(--border-radius-card);
+     -moz-border-radius: var(--border-radius-card);
+          border-radius: var(--border-radius-card);
 }
 .turnkey-solutions__item-download {
   max-width: 226px;
   width: 100%;
-  border-radius: var(--border-radius-card);
+  -webkit-border-radius: var(--border-radius-card);
+     -moz-border-radius: var(--border-radius-card);
+          border-radius: var(--border-radius-card);
 }
 
 .turnkey-solutions__slider-arrows {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .turnkey-solutions__slider-arrow--prev {
   margin-right: 15px;
@@ -134,6 +156,19 @@
     padding: 49px 30px;
     min-height: 360px;
   }
+  .turnkey-solutions__list .swiper-slide {
+    height: auto !important;
+  }
+  .spacer {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+       -moz-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .turnkey-solutions__list .swiper-slide > div {
+    height: 100%;
+  }
   .turnkey-solutions__item-name {
     margin-bottom: 16px;
     font-size: 14px;
@@ -160,17 +195,39 @@
     margin-bottom: 20px;
   }
   .turnkey-solutions__info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 16px;
   }
   .turnkey-solutions__item-price {
     margin-bottom: 0;
   }
   .turnkey-solutions__item-buy {
-    order: 5;
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+       -moz-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
     margin-bottom: 0;
     max-width: 100%;
   }
@@ -186,16 +243,28 @@
   }
   .turnkey-solutions__contact-link {
     margin-bottom: 0;
-    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+       -moz-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+         -o-transform: rotate(2deg);
+            transform: rotate(2deg);
     margin-left: 0;
   }
   .turnkey-solutions__slider-arrow--prev {
     margin-right: 0;
   }
   .turnkey-solutions__slider-arrows {
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .turnkey-solutions__slider-arrows .slider-pagination--fraction {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
   }
 

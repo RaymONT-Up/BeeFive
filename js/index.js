@@ -39,37 +39,39 @@ const swiper = new Swiper(".hero__slider", {
 
 // Services tabs || accordion for mobile
 if (window.innerWidth > 1000) {
-  const tabControlersList = document.querySelectorAll(".services__tab-btn");
-  const tabContentList = document.querySelectorAll(".services__tab-content");
-  let tabName;
-  const initTab = document.querySelector(
-    ".services__tab-content.services__tab--active"
-  );
+  window.addEventListener("load", () => {
+    const tabControlersList = document.querySelectorAll(".services__tab-btn");
+    const tabContentList = document.querySelectorAll(".services__tab-content");
+    let tabName;
+    const initTab = document.querySelector(
+      ".services__tab-content.services__tab--active"
+    );
 
-  initTab.style.maxHeight = `${initTab.scrollHeight + 30}px`;
+    initTab.style.maxHeight = `${initTab.scrollHeight}px`;
 
-  tabControlersList.forEach(item => {
-    item.addEventListener("click", e => {
-      tabControlersList.forEach(i => {
-        i.classList.remove("services__tab--active");
+    tabControlersList.forEach(item => {
+      item.addEventListener("click", e => {
+        tabControlersList.forEach(i => {
+          i.classList.remove("services__tab--active");
+        });
+        e.target.classList.add("services__tab--active");
+
+        tabName = e.target.getAttribute("data-tab-name");
+        tabContentChange(tabName);
       });
-      e.target.classList.add("services__tab--active");
-
-      tabName = e.target.getAttribute("data-tab-name");
-      tabContentChange(tabName);
     });
+
+    const tabContentChange = tabName => {
+      tabContentList.forEach(i => {
+        i.classList.remove("services__tab--active");
+        i.style.maxHeight = `0px`;
+      });
+      tabContentList[+tabName - 1].classList.add("services__tab--active");
+      tabContentList[+tabName - 1].style.maxHeight = `${
+        tabContentList[+tabName - 1].scrollHeight
+      }px`;
+    };
   });
-
-  const tabContentChange = tabName => {
-    tabContentList.forEach(i => {
-      i.classList.remove("services__tab--active");
-      i.style.maxHeight = `0px`;
-    });
-    tabContentList[+tabName - 1].classList.add("services__tab--active");
-    tabContentList[+tabName - 1].style.maxHeight = `${
-      tabContentList[+tabName - 1].scrollHeight
-    }px`;
-  };
 } else {
   const servicesAccordion = () => {
     const accordions = document.querySelectorAll(".services__accordion");
@@ -77,9 +79,7 @@ if (window.innerWidth > 1000) {
       .querySelector(".services__accordion--open")
       .querySelector(".services__accordion-content");
 
-    setTimeout(() => {
-      initOpen.style.maxHeight = `${initOpen.scrollHeight}px`;
-    }, 1000);
+    initOpen.style.maxHeight = `${initOpen.scrollHeight}px`;
 
     accordions.forEach(el => {
       el.addEventListener("click", e => {
@@ -100,7 +100,7 @@ if (window.innerWidth > 1000) {
       });
     });
   };
-  servicesAccordion();
+  window.addEventListener("load", servicesAccordion);
 }
 
 // Turnkey solutions slider
@@ -120,9 +120,6 @@ const turnkeySolutionsSlider = new Swiper(".turnkey-solutions__slider", {
   breakpoints: {
     0: {
       slidesPerView: 1,
-    },
-    461: {
-      slidesPerView: 1.5,
     },
     600: {
       slidesPerView: 2,
@@ -166,15 +163,15 @@ const casesSlider = new Swiper(".cases__slider", {
       spaceBetween: 10,
     },
     460: {
-      slidesPerView: 1.3,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     550: {
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       spaceBetween: 30,
     },
-    800: {
-      slidesPerView: 1.5,
+    768: {
+      slidesPerView: 2,
 
       spaceBetween: 50,
     },
@@ -207,7 +204,7 @@ const reviewsSlider = new Swiper(".reviews__slider", {
   },
   breakpoints: {
     0: {
-      centeredSlides: true,
+      centeredSlides: false,
     },
     1000: {
       centeredSlides: false,
@@ -318,7 +315,7 @@ const articlesSlider = new Swiper(".articles__slider", {
       },
     },
     460: {
-      slidesPerView: 1.5,
+      slidesPerView: 1,
 
       pagination: {
         el: ".articles__slider-pagination",
@@ -326,7 +323,7 @@ const articlesSlider = new Swiper(".articles__slider", {
       },
     },
 
-    800: {
+    768: {
       slidesPerView: 2,
     },
 
